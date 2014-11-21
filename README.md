@@ -1,4 +1,4 @@
 PredictionNote
 ==============
 
-A PredictionBook clone.
+A [PredictionBook](http://predictionbook.com/) clone.
