@@ -1,4 +1,4 @@
-#Final Checklist
+#Checklist
 
 - [ ] Use your own custom domain (no herokuapps.com subdomain)
 - [ ] Have a guest account (or two, if you need both to demo)
