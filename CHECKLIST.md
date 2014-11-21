@@ -42,14 +42,11 @@ and is crucial for any serious web app.
       shows that you have thought about better ways to implement features,
       etc.)
 - [ ] Read the book ["Don't Make
-      Me Think"][krug-book] by Steve Krug. It's a fun and easy read, and most of all,
+      Me Think"](http://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=sr_1_1) by Steve Krug. It's a fun and easy read, and most of all,
       you'll be able to apply it right away to your app. Most likely you will win
       points with interviewers for knowing or mentioning this book. It's a dearly
       loved book, and one of Jonathan's all time favorites.
 
-- [ ] [Make a logo][logo-generator] for your site.
+- [ ] [Make a logo](http://www.squarespace.com/logo) for your site.
 
 - [ ] Delete this checklist.
-
-      [logo-generator]: http://www.squarespace.com/logo
-      [krug-book]: http://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=sr_1_1
