@@ -11,3 +11,17 @@ Migrating to CreateUsers (20141124193256)
   [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-11-24 21:28:50.475781"], ["updated_at", "2014-11-24 21:28:50.475781"], ["username", "dude mang"]]
   [1m[36m (40.5ms)[0m  [1mCOMMIT[0m
   [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 13:43:28 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jayson/.rvm/gems/ruby-2.1.2/gems/railties-4.1.7/lib/rails/templates/rails/welcome/index.html.erb (12.1ms)
+Completed 200 OK in 465ms (Views: 411.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-24 13:43:29 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jayson/.rvm/gems/ruby-2.1.2/gems/railties-4.1.7/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
