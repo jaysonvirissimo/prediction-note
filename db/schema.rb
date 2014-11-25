@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125191032) do
+ActiveRecord::Schema.define(version: 20141125192430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,5 +34,16 @@ ActiveRecord::Schema.define(version: 20141125191032) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "wagers", force: true do |t|
+    t.integer  "prediction_id", null: false
+    t.integer  "probability",   null: false
+    t.integer  "user_id",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "wagers", ["prediction_id"], name: "index_wagers_on_prediction_id", using: :btree
+  add_index "wagers", ["user_id"], name: "index_wagers_on_user_id", using: :btree
 
 end
