@@ -1,5 +1,28 @@
 #Checklist
 
+***Specific Goals***
+- [ ] Rails API.
+-- [ ] User model
+-- [ ] User table
+-- [ ] User controller
+-- [ ] Prediction model
+-- [ ] Prediction table
+-- [ ] Prediction controller
+-- [ ] Wager model
+-- [ ] Wager table
+-- [ ] Wager controller
+-- [ ] Session controller
+- [ ] Bootstrap styling
+-- [ ] Navigation Bar
+- [ ] Backbone Frontend
+-- [ ] User model
+-- [ ] Prediction model
+-- [ ] Wager model
+- [ ] Chart.js
+-- [ ] User calibration graph
+-- [ ] Users calibration graph
+
+***Miscellaneous Goals***
 - [ ] Use your own custom domain (no herokuapps.com subdomain)
 - [ ] Have a guest account (or two, if you need both to demo)
 - [ ] Have well groomed seed data (real world stuff, no lorem ipsum)
