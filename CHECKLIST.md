@@ -2,25 +2,25 @@
 
 ***Specific Goals***
 - [ ] Rails API.
--- [ ] User model
--- [ ] User table
--- [ ] User controller
--- [ ] Prediction model
--- [ ] Prediction table
--- [ ] Prediction controller
--- [ ] Wager model
--- [ ] Wager table
--- [ ] Wager controller
--- [ ] Session controller
+  - [ ] User model
+  - [ ] User table
+  - [ ] User controller
+  - [ ] Prediction model
+  - [ ] Prediction table
+  - [ ] Prediction controller
+  - [ ] Wager model
+  - [ ] Wager table
+  - [ ] Wager controller
+  - [ ] Session controller
 - [ ] Bootstrap styling
--- [ ] Navigation Bar
+  - [ ] Navigation Bar
 - [ ] Backbone Frontend
--- [ ] User model
--- [ ] Prediction model
--- [ ] Wager model
+  - [ ] User model
+  - [ ] Prediction model
+  - [ ] Wager model
 - [ ] Chart.js
--- [ ] User calibration graph
--- [ ] Users calibration graph
+  - [ ] User calibration graph
+  - [ ] Users calibration graph
 
 ***Miscellaneous Goals***
 - [ ] Use your own custom domain (no herokuapps.com subdomain)
