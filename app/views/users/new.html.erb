@@ -6,18 +6,20 @@
   name="authenticity_token"
   value="#{ form_authenticity_token }">
 
-  <label>
-    Username
-    <input type="text" name="user[username]" value="">
-  </label>
 
-  <br>
+  <div class="form-group">
+    <label>
+      Username
+      <input type="text" name="user[username]" class="form-control" value="">
+    </label>
 
-  <label>
-    Password
-    <input type="password" name="user[password]" value="">
-  </label>
+    <br>
 
+    <label>
+      Password
+      <input type="password" name="user[password]" class="form-control" value="">
+    </label>
+    </div>
   <br>
 
   <input type="submit" value="Sign Up">
