@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       sign_in(@user)
       redirect_to predictions_url
     else
-      # displays errors
+      flash[:errors] = @user.errors.full_messages
       render :new
     end
   end

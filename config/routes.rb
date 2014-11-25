@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'predictions/index'
+
+  get 'predictions/new'
+
+  get 'predictions/create'
+
+  get 'predictions/show'
+
   root to: "sessions#new"
 
   resource :session, only: [:create, :destroy, :new]

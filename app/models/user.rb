@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many(:wagers)
   has_many(:predictions)
 
-  def self.find_by_user_credentials(username, password)
+  def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user and user.valid_password?(password)
     user
