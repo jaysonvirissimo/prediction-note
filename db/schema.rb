@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124193256) do
+ActiveRecord::Schema.define(version: 20141125191032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "predictions", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.string   "statement",  null: false
+    t.datetime "deadline",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "predictions", ["user_id"], name: "index_predictions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username"

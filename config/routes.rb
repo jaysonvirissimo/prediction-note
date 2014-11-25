@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resource :session, only: [:create, :destroy, :new]
   resources :users, only: [:create, :new]
   resources :predictions do
-    :wagers, only: [:create]
+    resources :wagers, only: [:create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
