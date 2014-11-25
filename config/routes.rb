@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resource :session
-  resources :users, only: [:create]
-  resources :predictions
+  resource :session, only: [:create, :destroy, :new]
+  resources :users, only: [:create, :new]
+  resources :predictions do
+    :wagers, only: [:create]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
