@@ -3,13 +3,13 @@
 ***Specific Goals***
 - [ ] Rails API.
   - [ ] User model
-  - [ ] User table
+  - [x] User table
   - [ ] User controller
   - [ ] Prediction model
-  - [ ] Prediction table
+  - [x] Prediction table
   - [ ] Prediction controller
   - [ ] Wager model
-  - [ ] Wager table
+  - [x] Wager table
   - [ ] Wager controller
   - [ ] Session controller
 - [ ] Bootstrap styling
