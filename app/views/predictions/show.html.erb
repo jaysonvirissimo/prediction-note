@@ -1,5 +1,6 @@
 <div>
-  <h3><%= @prediction.statement %></h3>
+  <h2><%= @prediction.statement %></h2>
+  <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
     The outcome will be known in
     <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
@@ -9,42 +10,47 @@
 
 <br>
 
-<div>
-  <h4>Wagers</h4>
-  <ul>
-  <% @prediction.wagers.each do |wager| %>
-    <li>
-      <%= wager.probability %>% <%= link_to(wager.user.username, wager.user) %>
-    </li>
-  <% end %>
-  </ul>
-</div>
+<% if @prediction.wagers.length > 0 %>
+  <div>
+    <h4>Wagers</h4>
+    <ul>
+    <% @prediction.wagers.each do |wager| %>
+      <li>
+        <%= wager.probability %>% <%= link_to(wager.user.username, wager.user) %>
+        on <%= Time.now %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 
-<br>
+  <br>
+<% end %>
 
-<div class="form-group">
-  <h4>Make a Wager</h4>
-  <form action="<%= wagers_url %>" method="post">
+<% if @prediction.deadline < Time.now %>
+  <div class="form-group">
+    <h4>Make a Wager</h4>
+    <form action="<%= wagers_url %>" method="post">
 
-    <input type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+      <input type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
 
-    <input type="hidden"
-    name="wager[prediction_id]"
-    value="<%= @prediction.id %>">
+      <input type="hidden"
+      name="wager[prediction_id]"
+      value="<%= @prediction.id %>">
 
-    <label>
-      Probability (0-100%)
-      <input type="number"
-            name="wager[probability]"
-            class="form-control"
-            value="50"
-            min="0"
-            max="100">
-    </label>
-    <br>
+      <label>
+        Probability (0-100%)
+        <input type="number"
+              name="wager[probability]"
+              class="form-control"
+              value="50"
+              min="0"
+              max="100">
+      </label>
+      <br>
 
-    <input type="submit" value="Affirm!" class="btn-default">
-  </form>
-</div>
+      <input type="submit" value="Affirm!" class="btn-default">
+    </form>
+  </div>
+<% end %>

@@ -1,7 +1,22 @@
 <h1>Predictions</h1>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Statement</th>
+      <th>Deadline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% count = 0 %>
 
-<ul>
-  <% @predictions.each do |prediction| %>
-    <li><%= link_to(prediction.statement, prediction) %></li>
-  <% end %>
-</ul>
+    <% @predictions.each do |prediction| %>
+    <% count += 1 %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+        <td><%= prediction.deadline %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
