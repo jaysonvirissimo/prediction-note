@@ -1,4 +1,4 @@
-<h1><%= @user.username %>'s Statistics</h1>
+<h1>Statistics for <%= @user.username %></h1>
 
 <br>
 
@@ -30,6 +30,21 @@
   <li>
     <%= link_to(wager.prediction.statement, predictions_url(wager.prediction)) %>
     <%= wager.probability %>%
+  </li>
+  <% end %>
+</ul>
+<% end %>
+
+<h3>Most Recent Judgments</h3>
+
+<% if @user.judgments.length < 1 %>
+<%= @user.username %> hasn't made any judgments yet...
+<% else %>
+<ul>
+  <% @user.judgments.each do |judgment| %>
+  <li>
+    <%= link_to(judgment.prediction.statement, predictions_url(judgment.prediction)) %>
+    <%= wager.probability %> was <% judgment.status %>.
   </li>
   <% end %>
 </ul>

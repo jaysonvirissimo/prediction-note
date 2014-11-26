@@ -36,6 +36,7 @@
 <% if @prediction.deadline > Time.now %>
   <div class="form-group">
     <h4>Make a Wager</h4>
+    <div class="well">
     <form action="<%= wagers_url %>" method="post">
 
       <input type="hidden"
@@ -59,5 +60,6 @@
 
       <input type="submit" value="Affirm!" class="btn-default">
     </form>
+  </div>
   </div>
 <% end %>
