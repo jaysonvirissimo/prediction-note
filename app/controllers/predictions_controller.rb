@@ -5,6 +5,7 @@ class PredictionsController < ApplicationController
   end
 
   def new
+    render :new
   end
 
   def create
