@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'chronic'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
+gem 'newrelic_rpm'
 
 group :devemopment, :test do
   gem 'spring'

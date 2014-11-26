@@ -6488,3 +6488,67 @@ Processing by SessionsController#create as HTML
   Rendered sessions/new.html.erb within layouts/application (0.8ms)
   [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
 Completed 200 OK in 140ms (Views: 131.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 187ms (Views: 170.5ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-25 18:13:11 -0800
+
+
+Started POST "/session" for 127.0.0.1 at 2014-11-25 18:16:00 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Vh0pJkHu1SvNgBW2MyKUf+oMjxeyDm5pss2ROlL0CpA=", "user"=>{"username"=>"jdncdsk", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."username" = 'jdncdsk' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 170ms (Views: 162.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-25 18:16:10 -0800
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.8ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (18.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 129ms (Views: 119.8ms | ActiveRecord: 3.2ms)
