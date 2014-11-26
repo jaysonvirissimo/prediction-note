@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
 <% if signed_in? %>
 <div class="navbar navbar-default">
   <div class="navbar-header">
@@ -68,6 +68,7 @@
     </div>
   </div>
 <% end %>
+</header>
 
 <% if flash[:errors] %>
 <div class="panel panel-danger">

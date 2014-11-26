@@ -1,8 +1,46 @@
-<h3><%= @prediction.statement %></h3>
-<h4>Predictor: <%= @prediction.user.username %></h4>
+<div>
+  <h3><em><%= @prediction.statement %></em></h3>
+  <h5>
+    The outcome will be known in
+    <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
+  </h5>
+  <h6>Predictor: <%= link_to(@prediction.user.username, @prediction.user) %></h6>
+</div>
 
-<ul>
-<% @prediction.wagers.each do |wager| %>
-<li><%= wager.probability %>% <%= wager.user.username %></li>
-<% end %>
-</ul>
+<br>
+
+<div>
+  <h4>Wagers</h4>
+  <ul>
+  <% @prediction.wagers.each do |wager| %>
+    <li>
+      <%= wager.probability %>% <%= link_to(wager.user.username, wager.user) %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<br>
+
+<div class="form-group">
+  <h4>Make a Wager</h4>
+  <form action="<%= wagers_url %>" method="post">
+
+    <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+    <label>
+      Probability (0-100%)
+      <input type="number"
+            name="wager[probability]"
+            class="form-control"
+            value="50"
+            min="0"
+            max="100">
+    </label>
+    <br>
+
+    <input type="submit" value="Affirm!" class="btn-default">
+  </form>
+</div>

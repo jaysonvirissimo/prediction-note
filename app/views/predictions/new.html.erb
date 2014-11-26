@@ -1,27 +1,24 @@
 <h1>Make a New Prediction</h1>
 
-<form action="<%= predictions_url %>" method="post">
+<div class="form-group">
+  <form action="<%= predictions_url %>" method="post">
 
-  <input type="hidden"
-  name="authenticity_token"
-  value="<%= form_authenticity_token %>">
+    <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
 
-  <div class="form-group">
-    <label>
-      Statement
-      <input type="textarea" name="prediction[statement]" class="form-control" value="">
-    </label>
-    <br>
-    <label>
-      Deadline
-      <input type="datetime" name="prediction[deadline]" class="form-control" value="">
-    </label>
-    <br>
-    <label>
-      Probability
-      <input type="number" name="prediction[probability]" class="form-control" value="">
-    </label>
-  </div>
 
-  <input type="submit" value="Affirm!" class="btn-default">
-</form>
+      <label>
+        Statement
+        <input type="textarea" name="prediction[statement]" class="form-control" value="">
+      </label>
+      <br>
+      <label>
+        Deadline
+        <input type="datetime" name="prediction[deadline]" class="form-control" value="">
+      </label>
+      <br>
+
+    <input type="submit" value="Submit!" class="btn-default">
+  </form>
+</div>
