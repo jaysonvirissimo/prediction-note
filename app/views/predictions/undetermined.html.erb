@@ -1,3 +1,4 @@
+<h1>Overdue Predictions</h1>
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
@@ -7,15 +8,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Column content</td>
-      <td>Column content</td>
-    </tr>
+    <% count = 0 %>
+
+    <% @predictions.each do |prediction| %>
+      <% if prediction.deadline < Time.now %>
+        <% count += 1 %>
+        <tr>
+          <td><%= count %></td>
+          <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+          <td><%= prediction.deadline %></td>
+        </tr>
+      <% end %>
+    <% end %>
   </tbody>
 </table>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126221200) do
+ActiveRecord::Schema.define(version: 20141126223646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(version: 20141126221200) do
   add_index "judgments", ["user_id"], name: "index_judgments_on_user_id", using: :btree
 
   create_table "predictions", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.string   "statement",  null: false
-    t.datetime "deadline",   null: false
+    t.integer  "user_id",                    null: false
+    t.string   "statement",                  null: false
+    t.datetime "deadline",                   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "judged"
+    t.boolean  "judged",     default: false
   end
 
   add_index "predictions", ["user_id"], name: "index_predictions_on_user_id", using: :btree
