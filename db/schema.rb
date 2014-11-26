@@ -11,39 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125192430) do
+ActiveRecord::Schema.define(version: 20_141_125_192_430) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "predictions", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.string   "statement",  null: false
-    t.datetime "deadline",   null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'predictions', force: true do |t|
+    t.integer 'user_id',    null: false
+    t.string 'statement',  null: false
+    t.datetime 'deadline',   null: false
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  add_index "predictions", ["user_id"], name: "index_predictions_on_user_id", using: :btree
+  add_index 'predictions', ['user_id'], name: 'index_predictions_on_user_id', using: :btree
 
-  create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "password_digest"
-    t.string   "session_token"
-    t.boolean  "admin",           default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'users', force: true do |t|
+    t.string 'username'
+    t.string 'password_digest'
+    t.string 'session_token'
+    t.boolean 'admin',           default: false
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "wagers", force: true do |t|
-    t.integer  "prediction_id", null: false
-    t.integer  "probability",   null: false
-    t.integer  "user_id",       null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'wagers', force: true do |t|
+    t.integer 'prediction_id', null: false
+    t.integer 'probability',   null: false
+    t.integer 'user_id',       null: false
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  add_index "wagers", ["prediction_id"], name: "index_wagers_on_prediction_id", using: :btree
-  add_index "wagers", ["user_id"], name: "index_wagers_on_user_id", using: :btree
+  add_index 'wagers', ['prediction_id'], name: 'index_wagers_on_prediction_id', using: :btree
+  add_index 'wagers', ['user_id'], name: 'index_wagers_on_user_id', using: :btree
 
 end

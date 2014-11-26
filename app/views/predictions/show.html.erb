@@ -1,2 +1,8 @@
-<h1>Predictions#show</h1>
-<p>Find me in app/views/predictions/show.html.erb</p>
+<h3><%= @prediction.statement %></h3>
+<h4>Predictor: <%= @prediction.user.username %></h4>
+
+<ul>
+<% @prediction.wagers.each do |wager| %>
+<li><%= wager.probability %>% <%= wager.user.username %></li>
+<% end %>
+</ul>

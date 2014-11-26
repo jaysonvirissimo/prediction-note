@@ -1,7 +1,7 @@
 <h1>Predictions</h1>
 
 <ul>
-<% @predictions.each do |prediction| %>
-<li><%= prediction.statement %></li>
-<% end %>
+  <% @predictions.each do |prediction| %>
+    <li><%= link_to(prediction.statement, prediction) %></li>
+  <% end %>
 </ul>

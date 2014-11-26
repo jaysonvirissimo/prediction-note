@@ -11,9 +11,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'chronic'
 gem 'bcrypt', '~> 3.1.7'
+gem 'faker'
 
-group :devemopment do
-  gem 'faker'
+group :devemopment, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'better_errors'

@@ -12,5 +12,7 @@ class PredictionsController < ApplicationController
   end
 
   def show
+    @prediction = Prediction.find(params[:id])
+    render :show
   end
 end

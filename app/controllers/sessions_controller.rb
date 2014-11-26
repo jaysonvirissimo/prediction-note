@@ -12,10 +12,9 @@ class SessionsController < ApplicationController
       sign_in(@user)
       redirect_to predictions_url
     else
-      flash.now[:errors] = ["Invalid username, password, or both."]
+      flash.now[:errors] = ['Invalid username, password, or both.']
       render :new
     end
-
   end
 
   def destroy
