@@ -1,24 +1,36 @@
-<h1>Make a New Prediction</h1>
+<form class="form-horizontal" action="<%= predictions_url %>" method="post">
 
-<div class="form-group">
-  <form action="<%= predictions_url %>" method="post">
+  <input type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>">
 
-    <input type="hidden"
-    name="authenticity_token"
-    value="<%= form_authenticity_token %>">
+  <fieldset>
+    <legend>Make a New Prediction</legend>
+    <div class="form-group">
+      <label for="inputStatement" class="col-lg-2 control-label">Statement</label>
+      <div class="col-lg-10">
+        <input type="text"
+               class="form-control"
+               id="inputStatement"
+               name="prediction[statement]"
+               placeholder="Godzilla will attack Tokyo within the week.">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputDeadline" class="col-lg-2 control-label">Deadline</label>
+      <div class="col-lg-10">
+        <input type="datetime"
+               class="form-control"
+               id="inputDeadline"
+               name="prediction[deadline]"
+               placeholder="in seven days">
+      </div>
+    </div>
 
-
-      <label>
-        Statement
-        <input type="textarea" name="prediction[statement]" class="form-control" value="">
-      </label>
-      <br>
-      <label>
-        Deadline
-        <input type="datetime" name="prediction[deadline]" class="form-control" value="">
-      </label>
-      <br>
-
-    <input type="submit" value="Submit!" class="btn-default">
-  </form>
-</div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>

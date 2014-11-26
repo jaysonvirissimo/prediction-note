@@ -7,15 +7,25 @@
 <br>
 
 <h3>Most Recent Predictions</h3>
+
+<% if @user.predictions.length < 1 %>
+<%= @user.username %> hasn't made any predictions yet...
+<% else %>
 <ul>
-<% @user.predictions.each do |prediction| %>
-<li><%= link_to(prediction.statement, predictions_url(prediction)) %></li>
-<% end %>
+  <% @user.predictions.each do |prediction| %>
+  <li><%= link_to(prediction.statement, predictions_url(prediction)) %></li>
+  <% end %>
 </ul>
+<% end %>
+
 
 <br>
 
 <h3>Most Recent Wagers</h3>
+
+<% if @user.wagers.length < 1 %>
+<%= @user.username %> hasn't made any wagers yet...
+<% else %>
 <ul>
   <% @user.wagers.each do |wager| %>
   <li>
@@ -24,3 +34,4 @@
   </li>
   <% end %>
 </ul>
+<% end %>
