@@ -8,67 +8,46 @@
 </head>
 <body>
 <header>
-<% if signed_in? %>
-<div class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="<%= root_url %>">PredictionNote</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-      <li><%= link_to("Predictions", predictions_url) %></li>
-      <li><%= link_to("New Prediction", new_prediction_url) %></li>
-      <li><a href="#">Awaiting Judgment <span class="badge">0</span></a></li>
-      <li><a href="#">Tutorial</a></li>
-    </ul>
-    <form class="navbar-form navbar-left">
-      <input type="text" class="form-control col-lg-8" placeholder="Search">
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome,
-          <%= current_user.username %><b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to("Statistics", users_url(current_user)) %></li>
-          <li><a href="#">Settings</a></li>
-          <li class="divider"></li>
-          <li><%= link_to("Sign Out", session_url, :method => :delete) %></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-<% else %>
-<div class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="<%= root_url %>">PredictionNote</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-      <li><%= link_to("Predictions", predictions_url) %></li>
-      <li><%= link_to("New Prediction", new_prediction_url) %></li>
-      <li><a href="#">Awaiting Judgment <span class="badge">0</span></a></li>
-      <li><a href="#">Tutorial</a></li>
-    </ul>
-    <form class="navbar-form navbar-left">
-      <input type="text" class="form-control col-lg-8" placeholder="Search">
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Sign In", new_session_url %></li>
-      <li><%= link_to "Sign Up", new_user_url %></li>
-    </ul>
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<%= root_url %>"><strong>PredictionNote</strong></a>
+    </div>
+    <div class="navbar-collapse collapse navbar-responsive-collapse">
+      <ul class="nav navbar-nav">
+        <li><%= link_to("Predictions", predictions_url) %></li>
+        <li><%= link_to("New Prediction", new_prediction_url) %></li>
+        <li><a href="#">Awaiting Judgment <span class="badge">0</span></a></li>
+        <li><a href="#">Tutorial</a></li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <input type="text" class="form-control col-lg-8" placeholder="Search">
+      </form>
+      <% if signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome,
+            <%= current_user.username %><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to("Statistics", users_url(current_user)) %></li>
+            <li><a href="#">Settings</a></li>
+            <li class="divider"></li>
+            <li><%= link_to("Sign Out", session_url, :method => :delete) %></li>
+          </ul>
+        </li>
+      </ul>
+      <% else %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Sign In", new_session_url %></li>
+        <li><%= link_to "Sign Up", new_user_url %></li>
+      </ul>
+      <% end %>
     </div>
   </div>
-<% end %>
 </header>
 
 <% if flash[:errors] %>
