@@ -69,6 +69,7 @@
   </div>
 <% end %>
 
+<% if flash[:errors] %>
 <div class="panel panel-danger">
   <div class="panel-heading">
     <h3 class="panel-title">Error</h3>
@@ -77,6 +78,7 @@
     <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
   </div>
 </div>
+<% end %>
 
 <section class="container">
 <%= yield %>
