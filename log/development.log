@@ -24005,3 +24005,1476 @@ Processing by PredictionsController#undetermined as HTML
   Rendered predictions/undetermined.html.erb within layouts/application (2.9ms)
   [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
 Completed 200 OK in 112ms (Views: 109.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-26 15:23:43 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[36mPrediction Load (0.7ms)[0m  [1mSELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')[0m
+  Rendered predictions/undetermined.html.erb within layouts/application (5.7ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 136ms (Views: 132.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:43 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:43 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:23:44 -0800
+
+
+Started GET "/predictions/37" for 127.0.0.1 at 2014-11-26 15:23:46 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mPrediction Load (0.4ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mWager Load (0.4ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 37]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  Rendered predictions/show.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 115ms (Views: 110.3ms | ActiveRecord: 1.8ms)
+  [1m[36mPrediction Load (0.7ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  [1m[35mPrediction Load (0.9ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 37]]
+  [1m[36mPrediction Load (0.9ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 37]]
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-26 15:24:50 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[35mPrediction Load (0.6ms)[0m  SELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')
+  Rendered predictions/undetermined.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 131ms (Views: 128.5ms | ActiveRecord: 1.1ms)
+  [1m[35mPrediction Load (0.9ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 37]]
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')
+  Rendered predictions/undetermined.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 15:25:20 -0800
+
+
+Started GET "/predictions/38" for 127.0.0.1 at 2014-11-26 15:25:22 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  Rendered predictions/show.html.erb within layouts/application (6.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 128ms (Views: 123.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/predictions/38" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPrediction Load (0.4ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mWager Load (0.6ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  Rendered predictions/show.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 126ms (Views: 120.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:32 -0800
+
+
+Started GET "/predictions/38" for 127.0.0.1 at 2014-11-26 15:27:46 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[35mPrediction Load (0.5ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mWager Load (0.9ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 38]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  Rendered predictions/show.html.erb within layouts/application (12.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 203ms (Views: 197.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:27:47 -0800
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-26 15:27:53 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[36mPrediction Load (0.5ms)[0m  [1mSELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')[0m
+  Rendered predictions/undetermined.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 109ms (Views: 106.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/predictions/38" for 127.0.0.1 at 2014-11-26 15:27:54 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPrediction Load (0.6ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 38]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  [1m[36mWager Load (0.5ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 38]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 38]]
+  Rendered predictions/show.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 149ms (Views: 144.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 15:27:57 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT "predictions".* FROM "predictions"
+  Rendered predictions/index.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 120ms (Views: 116.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/predictions/3" for 127.0.0.1 at 2014-11-26 15:27:58 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPrediction Load (0.6ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 31]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 37]]
+  Rendered predictions/show.html.erb within layouts/application (18.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 127ms (Views: 120.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 15:28:13 -0800
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.7ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (14.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 153ms (Views: 150.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/predictions/7" for 127.0.0.1 at 2014-11-26 15:28:16 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPrediction Load (0.5ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mWager Load (0.7ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 7]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  Rendered predictions/show.html.erb within layouts/application (13.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 121ms (Views: 115.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/predictions/3" for 127.0.0.1 at 2014-11-26 15:28:22 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPrediction Load (0.5ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mWager Load (0.3ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 31]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 37]]
+  Rendered predictions/show.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 194ms (Views: 188.0ms | ActiveRecord: 3.0ms)
+  [1m[36mPrediction Load (0.9ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSQL (35.8ms)[0m  [1mDELETE FROM "predictions"[0m
+  [1m[35mSQL (72.6ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (40.6ms)[0m  [1mDELETE FROM "wagers"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (19.7ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:30:59.661882"], ["password_digest", "$2a$10$tqsagJTd4/P7WILHy8IrK.PDkEjvBTscL5ujoqO8JRxPAyJYadkKa"], ["session_token", "LlZ_Ifq5t9T9kWQWFazfxg"], ["updated_at", "2014-11-26 23:30:59.661882"], ["username", "don"]]
+  [1m[35m (20.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:30:59.793480"], ["password_digest", "$2a$10$0viycjTeQLbN2LbCk8jFfuFhQXmiG25aCus69BXWQUr.R15KecSAS"], ["session_token", "FiLYLVS7DhHllaV9PSawHw"], ["updated_at", "2014-11-26 23:30:59.793480"], ["username", "walter"]]
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:30:59.893356"], ["password_digest", "$2a$10$iQ6W0DDp.2mBqODdwqgbReUrib7eC6bG/nkaMSlhHrE595tPvdXyq"], ["session_token", "9m-1FhfjudG3lu9JfFiWug"], ["updated_at", "2014-11-26 23:30:59.893356"], ["username", "jonas.lynch"]]
+  [1m[35m (12.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:30:59.993343"], ["password_digest", "$2a$10$MduyXk9K5XTKmfZ7iBiwt.PvRNGW4WLjNQjxHNEpqhaKPKsBRO8QG"], ["session_token", "V8lobI-yuH9Rw6iXyjaGkw"], ["updated_at", "2014-11-26 23:30:59.993343"], ["username", "waldo"]]
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.093470"], ["password_digest", "$2a$10$F3pdWkC9Q2SqzIyFtzjmmers9mCsBFF9iJL3xJKez7K284HAsRHvy"], ["session_token", "3qiKcY5Z28CLlejJJD17Aw"], ["updated_at", "2014-11-26 23:31:00.093470"], ["username", "aglae_gleichner"]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.129548"], ["deadline", "2014-11-27 15:09:12.000000"], ["statement", "Ullam hic iusto voluptatum molestias quo voluptate non a."], ["updated_at", "2014-11-26 23:31:00.129548"], ["user_id", 42]]
+  [1m[35m (9.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.144518"], ["deadline", "2014-11-21 08:38:29.000000"], ["statement", "Aut consequuntur voluptatem dolorem accusantium porro."], ["updated_at", "2014-11-26 23:31:00.144518"], ["user_id", 45]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.155338"], ["deadline", "2014-11-16 22:31:17.000000"], ["statement", "Libero quisquam earum et maxime sed praesentium."], ["updated_at", "2014-11-26 23:31:00.155338"], ["user_id", 45]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.166393"], ["deadline", "2014-12-02 13:00:16.000000"], ["statement", "Ex cumque qui vitae neque numquam beatae omnis ducimus."], ["updated_at", "2014-11-26 23:31:00.166393"], ["user_id", 42]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.177375"], ["deadline", "2014-11-16 22:18:27.000000"], ["statement", "Consequatur enim est rerum eos laborum nostrum."], ["updated_at", "2014-11-26 23:31:00.177375"], ["user_id", 43]]
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.188624"], ["deadline", "2014-11-27 02:42:42.000000"], ["statement", "Dolores aperiam dolorem esse ea."], ["updated_at", "2014-11-26 23:31:00.188624"], ["user_id", 43]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.201763"], ["deadline", "2014-11-18 09:50:15.000000"], ["statement", "Provident nesciunt tenetur et non temporibus aut rerum."], ["updated_at", "2014-11-26 23:31:00.201763"], ["user_id", 45]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.211036"], ["deadline", "2014-11-28 13:04:22.000000"], ["statement", "Animi quibusdam sed nesciunt ut fuga quae."], ["updated_at", "2014-11-26 23:31:00.211036"], ["user_id", 45]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.222269"], ["deadline", "2014-11-20 09:29:33.000000"], ["statement", "Corrupti sit magni ullam error."], ["updated_at", "2014-11-26 23:31:00.222269"], ["user_id", 42]]
+  [1m[35m (10.6ms)[0m  COMMIT
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.243053"], ["deadline", "2014-12-03 03:11:56.000000"], ["statement", "Voluptatem ipsum omnis voluptatem et."], ["updated_at", "2014-11-26 23:31:00.243053"], ["user_id", 43]]
+  [1m[35m (11.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.267025"], ["deadline", "2014-11-18 14:51:57.000000"], ["statement", "Voluptates quia nobis voluptas eum quis totam sint veniam."], ["updated_at", "2014-11-26 23:31:00.267025"], ["user_id", 44]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.276785"], ["deadline", "2014-11-18 07:32:01.000000"], ["statement", "Odit vitae sed nihil et."], ["updated_at", "2014-11-26 23:31:00.276785"], ["user_id", 45]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.288459"], ["deadline", "2014-12-02 19:44:50.000000"], ["statement", "Ut id aut maxime."], ["updated_at", "2014-11-26 23:31:00.288459"], ["user_id", 44]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.299158"], ["deadline", "2014-11-30 00:01:58.000000"], ["statement", "Soluta recusandae consectetur autem et."], ["updated_at", "2014-11-26 23:31:00.299158"], ["user_id", 42]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.310814"], ["deadline", "2014-11-25 16:32:04.000000"], ["statement", "Sint enim provident reprehenderit tenetur ut fugiat aut voluptas."], ["updated_at", "2014-11-26 23:31:00.310814"], ["user_id", 42]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.321945"], ["deadline", "2014-11-29 03:31:40.000000"], ["statement", "Maiores accusantium nostrum quaerat non minima ut."], ["updated_at", "2014-11-26 23:31:00.321945"], ["user_id", 45]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.333444"], ["deadline", "2014-11-20 15:20:40.000000"], ["statement", "Autem autem non magni ipsum voluptas."], ["updated_at", "2014-11-26 23:31:00.333444"], ["user_id", 41]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.343563"], ["deadline", "2014-11-21 00:03:17.000000"], ["statement", "Dolorum optio et culpa enim quia voluptas nam."], ["updated_at", "2014-11-26 23:31:00.343563"], ["user_id", 44]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.355196"], ["deadline", "2014-12-01 12:30:08.000000"], ["statement", "Est ab est aspernatur harum."], ["updated_at", "2014-11-26 23:31:00.355196"], ["user_id", 41]]
+  [1m[35m (7.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.366180"], ["deadline", "2014-12-06 22:59:16.000000"], ["statement", "Quaerat debitis hic recusandae consequatur et praesentium."], ["updated_at", "2014-11-26 23:31:00.366180"], ["user_id", 43]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.378374"], ["deadline", "2014-11-22 12:42:48.000000"], ["statement", "Laboriosam occaecati velit voluptatem ea eligendi vero sed quaerat."], ["updated_at", "2014-11-26 23:31:00.378374"], ["user_id", 43]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.388275"], ["deadline", "2014-11-29 02:00:28.000000"], ["statement", "Qui ducimus et dicta dolores eum omnis ut eos."], ["updated_at", "2014-11-26 23:31:00.388275"], ["user_id", 42]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.399648"], ["deadline", "2014-11-17 12:08:51.000000"], ["statement", "Ut autem at ipsum cupiditate pariatur corporis voluptatibus aut."], ["updated_at", "2014-11-26 23:31:00.399648"], ["user_id", 42]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.410495"], ["deadline", "2014-12-06 22:45:09.000000"], ["statement", "Omnis itaque quo sed."], ["updated_at", "2014-11-26 23:31:00.410495"], ["user_id", 41]]
+  [1m[35m (7.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.423492"], ["deadline", "2014-12-05 22:15:52.000000"], ["statement", "Et sed dolores ipsa non sunt."], ["updated_at", "2014-11-26 23:31:00.423492"], ["user_id", 45]]
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36mPrediction Load (0.7ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.444927"], ["prediction_id", 41], ["probability", 12], ["updated_at", "2014-11-26 23:31:00.444927"], ["user_id", 42]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.453536"], ["prediction_id", 49], ["probability", 14], ["updated_at", "2014-11-26 23:31:00.453536"], ["user_id", 45]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.465263"], ["prediction_id", 41], ["probability", 12], ["updated_at", "2014-11-26 23:31:00.465263"], ["user_id", 41]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.476342"], ["prediction_id", 57], ["probability", 36], ["updated_at", "2014-11-26 23:31:00.476342"], ["user_id", 45]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.488091"], ["prediction_id", 61], ["probability", 30], ["updated_at", "2014-11-26 23:31:00.488091"], ["user_id", 41]]
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.498720"], ["prediction_id", 52], ["probability", 61], ["updated_at", "2014-11-26 23:31:00.498720"], ["user_id", 44]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.508855"], ["prediction_id", 39], ["probability", 47], ["updated_at", "2014-11-26 23:31:00.508855"], ["user_id", 45]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.520295"], ["prediction_id", 42], ["probability", 42], ["updated_at", "2014-11-26 23:31:00.520295"], ["user_id", 44]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.531110"], ["prediction_id", 54], ["probability", 83], ["updated_at", "2014-11-26 23:31:00.531110"], ["user_id", 41]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.542605"], ["prediction_id", 39], ["probability", 48], ["updated_at", "2014-11-26 23:31:00.542605"], ["user_id", 44]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.553660"], ["prediction_id", 58], ["probability", 53], ["updated_at", "2014-11-26 23:31:00.553660"], ["user_id", 44]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.566032"], ["prediction_id", 55], ["probability", 53], ["updated_at", "2014-11-26 23:31:00.566032"], ["user_id", 45]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.575944"], ["prediction_id", 48], ["probability", 6], ["updated_at", "2014-11-26 23:31:00.575944"], ["user_id", 42]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.587065"], ["prediction_id", 59], ["probability", 14], ["updated_at", "2014-11-26 23:31:00.587065"], ["user_id", 44]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.598089"], ["prediction_id", 49], ["probability", 85], ["updated_at", "2014-11-26 23:31:00.598089"], ["user_id", 43]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.609143"], ["prediction_id", 54], ["probability", 97], ["updated_at", "2014-11-26 23:31:00.609143"], ["user_id", 42]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.620486"], ["prediction_id", 49], ["probability", 9], ["updated_at", "2014-11-26 23:31:00.620486"], ["user_id", 43]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.631572"], ["prediction_id", 51], ["probability", 26], ["updated_at", "2014-11-26 23:31:00.631572"], ["user_id", 42]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.642728"], ["prediction_id", 48], ["probability", 38], ["updated_at", "2014-11-26 23:31:00.642728"], ["user_id", 42]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.654037"], ["prediction_id", 60], ["probability", 21], ["updated_at", "2014-11-26 23:31:00.654037"], ["user_id", 41]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.664911"], ["prediction_id", 45], ["probability", 8], ["updated_at", "2014-11-26 23:31:00.664911"], ["user_id", 41]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.675644"], ["prediction_id", 40], ["probability", 81], ["updated_at", "2014-11-26 23:31:00.675644"], ["user_id", 42]]
+  [1m[35m (9.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.687203"], ["prediction_id", 40], ["probability", 60], ["updated_at", "2014-11-26 23:31:00.687203"], ["user_id", 42]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.698183"], ["prediction_id", 40], ["probability", 90], ["updated_at", "2014-11-26 23:31:00.698183"], ["user_id", 43]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.709318"], ["prediction_id", 53], ["probability", 25], ["updated_at", "2014-11-26 23:31:00.709318"], ["user_id", 44]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.720572"], ["prediction_id", 46], ["probability", 38], ["updated_at", "2014-11-26 23:31:00.720572"], ["user_id", 43]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.732248"], ["prediction_id", 53], ["probability", 82], ["updated_at", "2014-11-26 23:31:00.732248"], ["user_id", 45]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.742858"], ["prediction_id", 45], ["probability", 12], ["updated_at", "2014-11-26 23:31:00.742858"], ["user_id", 45]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.753855"], ["prediction_id", 47], ["probability", 74], ["updated_at", "2014-11-26 23:31:00.753855"], ["user_id", 45]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.764945"], ["prediction_id", 63], ["probability", 21], ["updated_at", "2014-11-26 23:31:00.764945"], ["user_id", 44]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.776365"], ["prediction_id", 60], ["probability", 27], ["updated_at", "2014-11-26 23:31:00.776365"], ["user_id", 43]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.787422"], ["prediction_id", 58], ["probability", 21], ["updated_at", "2014-11-26 23:31:00.787422"], ["user_id", 41]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.798567"], ["prediction_id", 44], ["probability", 75], ["updated_at", "2014-11-26 23:31:00.798567"], ["user_id", 41]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.809390"], ["prediction_id", 54], ["probability", 61], ["updated_at", "2014-11-26 23:31:00.809390"], ["user_id", 45]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.820493"], ["prediction_id", 62], ["probability", 51], ["updated_at", "2014-11-26 23:31:00.820493"], ["user_id", 41]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.831535"], ["prediction_id", 42], ["probability", 86], ["updated_at", "2014-11-26 23:31:00.831535"], ["user_id", 42]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.842727"], ["prediction_id", 51], ["probability", 53], ["updated_at", "2014-11-26 23:31:00.842727"], ["user_id", 44]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.853820"], ["prediction_id", 62], ["probability", 71], ["updated_at", "2014-11-26 23:31:00.853820"], ["user_id", 41]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.864870"], ["prediction_id", 53], ["probability", 46], ["updated_at", "2014-11-26 23:31:00.864870"], ["user_id", 44]]
+  [1m[36m (8.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.876120"], ["prediction_id", 54], ["probability", 59], ["updated_at", "2014-11-26 23:31:00.876120"], ["user_id", 42]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.887253"], ["prediction_id", 48], ["probability", 81], ["updated_at", "2014-11-26 23:31:00.887253"], ["user_id", 45]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.898384"], ["prediction_id", 50], ["probability", 22], ["updated_at", "2014-11-26 23:31:00.898384"], ["user_id", 44]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.909554"], ["prediction_id", 62], ["probability", 88], ["updated_at", "2014-11-26 23:31:00.909554"], ["user_id", 43]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.920630"], ["prediction_id", 55], ["probability", 38], ["updated_at", "2014-11-26 23:31:00.920630"], ["user_id", 44]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.931669"], ["prediction_id", 59], ["probability", 19], ["updated_at", "2014-11-26 23:31:00.931669"], ["user_id", 44]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.942950"], ["prediction_id", 52], ["probability", 47], ["updated_at", "2014-11-26 23:31:00.942950"], ["user_id", 43]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.953537"], ["prediction_id", 46], ["probability", 89], ["updated_at", "2014-11-26 23:31:00.953537"], ["user_id", 45]]
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.965290"], ["prediction_id", 60], ["probability", 45], ["updated_at", "2014-11-26 23:31:00.965290"], ["user_id", 44]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.976104"], ["prediction_id", 59], ["probability", 14], ["updated_at", "2014-11-26 23:31:00.976104"], ["user_id", 44]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:00.987225"], ["prediction_id", 46], ["probability", 74], ["updated_at", "2014-11-26 23:31:00.987225"], ["user_id", 45]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:00.998088"], ["prediction_id", 48], ["probability", 60], ["updated_at", "2014-11-26 23:31:00.998088"], ["user_id", 45]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.009702"], ["prediction_id", 50], ["probability", 32], ["updated_at", "2014-11-26 23:31:01.009702"], ["user_id", 45]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.020149"], ["prediction_id", 53], ["probability", 67], ["updated_at", "2014-11-26 23:31:01.020149"], ["user_id", 42]]
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.031629"], ["prediction_id", 63], ["probability", 42], ["updated_at", "2014-11-26 23:31:01.031629"], ["user_id", 42]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.043091"], ["prediction_id", 54], ["probability", 94], ["updated_at", "2014-11-26 23:31:01.043091"], ["user_id", 44]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.053498"], ["prediction_id", 47], ["probability", 7], ["updated_at", "2014-11-26 23:31:01.053498"], ["user_id", 41]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.064980"], ["prediction_id", 46], ["probability", 60], ["updated_at", "2014-11-26 23:31:01.064980"], ["user_id", 41]]
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.076404"], ["prediction_id", 62], ["probability", 81], ["updated_at", "2014-11-26 23:31:01.076404"], ["user_id", 41]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.087380"], ["prediction_id", 60], ["probability", 22], ["updated_at", "2014-11-26 23:31:01.087380"], ["user_id", 42]]
+  [1m[36m (14.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (6.6ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.106526"], ["prediction_id", 52], ["probability", 93], ["updated_at", "2014-11-26 23:31:01.106526"], ["user_id", 42]]
+  [1m[35m (3.7ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.121582"], ["prediction_id", 62], ["probability", 60], ["updated_at", "2014-11-26 23:31:01.121582"], ["user_id", 45]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.131699"], ["prediction_id", 57], ["probability", 5], ["updated_at", "2014-11-26 23:31:01.131699"], ["user_id", 41]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.142857"], ["prediction_id", 51], ["probability", 88], ["updated_at", "2014-11-26 23:31:01.142857"], ["user_id", 43]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.153595"], ["prediction_id", 59], ["probability", 24], ["updated_at", "2014-11-26 23:31:01.153595"], ["user_id", 44]]
+  [1m[35m (9.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.165044"], ["prediction_id", 53], ["probability", 1], ["updated_at", "2014-11-26 23:31:01.165044"], ["user_id", 45]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.176160"], ["prediction_id", 56], ["probability", 18], ["updated_at", "2014-11-26 23:31:01.176160"], ["user_id", 41]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.187563"], ["prediction_id", 44], ["probability", 30], ["updated_at", "2014-11-26 23:31:01.187563"], ["user_id", 43]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.197949"], ["prediction_id", 61], ["probability", 27], ["updated_at", "2014-11-26 23:31:01.197949"], ["user_id", 41]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.209441"], ["prediction_id", 46], ["probability", 40], ["updated_at", "2014-11-26 23:31:01.209441"], ["user_id", 45]]
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.220592"], ["prediction_id", 59], ["probability", 68], ["updated_at", "2014-11-26 23:31:01.220592"], ["user_id", 44]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.231732"], ["prediction_id", 52], ["probability", 62], ["updated_at", "2014-11-26 23:31:01.231732"], ["user_id", 43]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.242463"], ["prediction_id", 46], ["probability", 46], ["updated_at", "2014-11-26 23:31:01.242463"], ["user_id", 44]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.253905"], ["prediction_id", 60], ["probability", 59], ["updated_at", "2014-11-26 23:31:01.253905"], ["user_id", 45]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.264957"], ["prediction_id", 48], ["probability", 31], ["updated_at", "2014-11-26 23:31:01.264957"], ["user_id", 45]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.276560"], ["prediction_id", 60], ["probability", 47], ["updated_at", "2014-11-26 23:31:01.276560"], ["user_id", 44]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.286933"], ["prediction_id", 56], ["probability", 17], ["updated_at", "2014-11-26 23:31:01.286933"], ["user_id", 44]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.298359"], ["prediction_id", 56], ["probability", 76], ["updated_at", "2014-11-26 23:31:01.298359"], ["user_id", 43]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.309369"], ["prediction_id", 50], ["probability", 31], ["updated_at", "2014-11-26 23:31:01.309369"], ["user_id", 42]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.320905"], ["prediction_id", 42], ["probability", 65], ["updated_at", "2014-11-26 23:31:01.320905"], ["user_id", 42]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.331782"], ["prediction_id", 57], ["probability", 77], ["updated_at", "2014-11-26 23:31:01.331782"], ["user_id", 45]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.342756"], ["prediction_id", 53], ["probability", 39], ["updated_at", "2014-11-26 23:31:01.342756"], ["user_id", 45]]
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.354171"], ["prediction_id", 57], ["probability", 22], ["updated_at", "2014-11-26 23:31:01.354171"], ["user_id", 45]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.364621"], ["prediction_id", 39], ["probability", 13], ["updated_at", "2014-11-26 23:31:01.364621"], ["user_id", 44]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.376315"], ["prediction_id", 49], ["probability", 3], ["updated_at", "2014-11-26 23:31:01.376315"], ["user_id", 43]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.387366"], ["prediction_id", 49], ["probability", 24], ["updated_at", "2014-11-26 23:31:01.387366"], ["user_id", 44]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.399300"], ["prediction_id", 56], ["probability", 37], ["updated_at", "2014-11-26 23:31:01.399300"], ["user_id", 43]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.410166"], ["prediction_id", 57], ["probability", 21], ["updated_at", "2014-11-26 23:31:01.410166"], ["user_id", 45]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.420420"], ["prediction_id", 62], ["probability", 27], ["updated_at", "2014-11-26 23:31:01.420420"], ["user_id", 45]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.431851"], ["prediction_id", 53], ["probability", 0], ["updated_at", "2014-11-26 23:31:01.431851"], ["user_id", 43]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.442841"], ["prediction_id", 39], ["probability", 94], ["updated_at", "2014-11-26 23:31:01.442841"], ["user_id", 42]]
+  [1m[35m (8.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.454265"], ["prediction_id", 43], ["probability", 97], ["updated_at", "2014-11-26 23:31:01.454265"], ["user_id", 45]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.466080"], ["prediction_id", 47], ["probability", 84], ["updated_at", "2014-11-26 23:31:01.466080"], ["user_id", 42]]
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.476314"], ["prediction_id", 51], ["probability", 73], ["updated_at", "2014-11-26 23:31:01.476314"], ["user_id", 42]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.487425"], ["prediction_id", 45], ["probability", 82], ["updated_at", "2014-11-26 23:31:01.487425"], ["user_id", 45]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.498182"], ["prediction_id", 58], ["probability", 0], ["updated_at", "2014-11-26 23:31:01.498182"], ["user_id", 41]]
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.509635"], ["prediction_id", 40], ["probability", 51], ["updated_at", "2014-11-26 23:31:01.509635"], ["user_id", 41]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.521010"], ["prediction_id", 55], ["probability", 55], ["updated_at", "2014-11-26 23:31:01.521010"], ["user_id", 42]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.531479"], ["prediction_id", 59], ["probability", 41], ["updated_at", "2014-11-26 23:31:01.531479"], ["user_id", 44]]
+  [1m[35m (9.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.543004"], ["prediction_id", 59], ["probability", 81], ["updated_at", "2014-11-26 23:31:01.543004"], ["user_id", 45]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.554109"], ["prediction_id", 60], ["probability", 56], ["updated_at", "2014-11-26 23:31:01.554109"], ["user_id", 44]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.565058"], ["prediction_id", 61], ["probability", 97], ["updated_at", "2014-11-26 23:31:01.565058"], ["user_id", 45]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.575909"], ["prediction_id", 39], ["probability", 85], ["updated_at", "2014-11-26 23:31:01.575909"], ["user_id", 45]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.587418"], ["prediction_id", 58], ["probability", 58], ["updated_at", "2014-11-26 23:31:01.587418"], ["user_id", 42]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.598560"], ["prediction_id", 56], ["probability", 9], ["updated_at", "2014-11-26 23:31:01.598560"], ["user_id", 45]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.609288"], ["prediction_id", 41], ["probability", 7], ["updated_at", "2014-11-26 23:31:01.609288"], ["user_id", 42]]
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.620805"], ["prediction_id", 47], ["probability", 52], ["updated_at", "2014-11-26 23:31:01.620805"], ["user_id", 41]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.632040"], ["prediction_id", 53], ["probability", 37], ["updated_at", "2014-11-26 23:31:01.632040"], ["user_id", 41]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.644518"], ["prediction_id", 62], ["probability", 32], ["updated_at", "2014-11-26 23:31:01.644518"], ["user_id", 44]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.654490"], ["prediction_id", 40], ["probability", 98], ["updated_at", "2014-11-26 23:31:01.654490"], ["user_id", 45]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.665370"], ["prediction_id", 59], ["probability", 27], ["updated_at", "2014-11-26 23:31:01.665370"], ["user_id", 43]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.676415"], ["prediction_id", 60], ["probability", 43], ["updated_at", "2014-11-26 23:31:01.676415"], ["user_id", 44]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.687139"], ["prediction_id", 40], ["probability", 74], ["updated_at", "2014-11-26 23:31:01.687139"], ["user_id", 41]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.698616"], ["prediction_id", 56], ["probability", 96], ["updated_at", "2014-11-26 23:31:01.698616"], ["user_id", 45]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.710115"], ["prediction_id", 43], ["probability", 81], ["updated_at", "2014-11-26 23:31:01.710115"], ["user_id", 45]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.720514"], ["prediction_id", 40], ["probability", 65], ["updated_at", "2014-11-26 23:31:01.720514"], ["user_id", 42]]
+  [1m[36m (9.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.731933"], ["prediction_id", 48], ["probability", 77], ["updated_at", "2014-11-26 23:31:01.731933"], ["user_id", 41]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.743121"], ["prediction_id", 42], ["probability", 68], ["updated_at", "2014-11-26 23:31:01.743121"], ["user_id", 41]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.753809"], ["prediction_id", 47], ["probability", 67], ["updated_at", "2014-11-26 23:31:01.753809"], ["user_id", 43]]
+  [1m[35m (8.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.765113"], ["prediction_id", 56], ["probability", 45], ["updated_at", "2014-11-26 23:31:01.765113"], ["user_id", 42]]
+  [1m[36m (8.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.776405"], ["prediction_id", 62], ["probability", 69], ["updated_at", "2014-11-26 23:31:01.776405"], ["user_id", 44]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.787473"], ["prediction_id", 58], ["probability", 60], ["updated_at", "2014-11-26 23:31:01.787473"], ["user_id", 44]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.799026"], ["prediction_id", 53], ["probability", 19], ["updated_at", "2014-11-26 23:31:01.799026"], ["user_id", 41]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.810362"], ["prediction_id", 63], ["probability", 78], ["updated_at", "2014-11-26 23:31:01.810362"], ["user_id", 44]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:01.820526"], ["prediction_id", 61], ["probability", 75], ["updated_at", "2014-11-26 23:31:01.820526"], ["user_id", 41]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:01.831938"], ["prediction_id", 43], ["probability", 53], ["updated_at", "2014-11-26 23:31:01.831938"], ["user_id", 41]]
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:08.967112"], ["password_digest", "$2a$10$m098U1vuKMq/JiIIvWcmyuaU9JN72orrLOCLyvT6GMGHiy81ZG9Nu"], ["session_token", "u3LSIDPXOnQpMqlCPbBFJw"], ["updated_at", "2014-11-26 23:31:08.967112"], ["username", "elda.torphy"]]
+  [1m[35m (34.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.104221"], ["password_digest", "$2a$10$tUNfzgOJd5LzQGqlkKVFQuSm0gmjC2jad1SD3wp/Tkyx5aHxm9Zsi"], ["session_token", "8QDauNJUEfGoIGol8yB-Sw"], ["updated_at", "2014-11-26 23:31:09.104221"], ["username", "dangelo.lubowitz"]]
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.205279"], ["password_digest", "$2a$10$T.M7ubvV.CNFNr/3PPNW0.ehsCOahR3vLOn654gUZHtkrxRaRxxzu"], ["session_token", "OiHeQfW0-88_UgvFi_V5cA"], ["updated_at", "2014-11-26 23:31:09.205279"], ["username", "michale"]]
+  [1m[35m (12.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.305593"], ["password_digest", "$2a$10$0ATOtnh4t8TcdUxhZi/2leIk25vNXQGZohuoKUkl8qChw3RDJrZ/m"], ["session_token", "nnI9NMGY8QmD6BEJesv27g"], ["updated_at", "2014-11-26 23:31:09.305593"], ["username", "trent"]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.405507"], ["password_digest", "$2a$10$JwdIeqyQa3jsIpWwsPiLee67MhR3lf9wO/ahCAVRHQrQwKdnj0p/S"], ["session_token", "tE79d_HLdk7iKAQTbrjvYg"], ["updated_at", "2014-11-26 23:31:09.405507"], ["username", "sierra"]]
+  [1m[35m (12.2ms)[0m  COMMIT
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.443571"], ["deadline", "2014-11-26 13:22:37.000000"], ["statement", "Occaecati hic et molestiae qui voluptates libero sit vitae."], ["updated_at", "2014-11-26 23:31:09.443571"], ["user_id", 44]]
+  [1m[35m (7.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.456635"], ["deadline", "2014-11-24 14:05:15.000000"], ["statement", "In aperiam eligendi minus atque consectetur eum non ut."], ["updated_at", "2014-11-26 23:31:09.456635"], ["user_id", 43]]
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.466921"], ["deadline", "2014-12-01 20:35:28.000000"], ["statement", "Facilis natus voluptatibus eum itaque quasi consequatur ipsa."], ["updated_at", "2014-11-26 23:31:09.466921"], ["user_id", 48]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.479379"], ["deadline", "2014-11-23 19:59:22.000000"], ["statement", "Sequi non consequatur consequatur quam possimus sunt."], ["updated_at", "2014-11-26 23:31:09.479379"], ["user_id", 44]]
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.489046"], ["deadline", "2014-12-05 13:13:45.000000"], ["statement", "Cupiditate veniam necessitatibus hic excepturi quos explicabo."], ["updated_at", "2014-11-26 23:31:09.489046"], ["user_id", 48]]
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.500869"], ["deadline", "2014-12-06 22:29:02.000000"], ["statement", "Quia et magni expedita magnam nobis natus a autem."], ["updated_at", "2014-11-26 23:31:09.500869"], ["user_id", 48]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.513341"], ["deadline", "2014-11-29 08:13:30.000000"], ["statement", "Ut enim eligendi ipsum sit."], ["updated_at", "2014-11-26 23:31:09.513341"], ["user_id", 43]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.523988"], ["deadline", "2014-11-16 20:15:33.000000"], ["statement", "Rerum sunt nulla impedit."], ["updated_at", "2014-11-26 23:31:09.523988"], ["user_id", 44]]
+  [1m[35m (4.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.534728"], ["deadline", "2014-11-24 04:40:55.000000"], ["statement", "Similique sequi velit qui ullam nesciunt quis."], ["updated_at", "2014-11-26 23:31:09.534728"], ["user_id", 44]]
+  [1m[35m (4.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.544968"], ["deadline", "2014-11-28 08:23:16.000000"], ["statement", "Consequatur id ut et ad ex saepe reiciendis."], ["updated_at", "2014-11-26 23:31:09.544968"], ["user_id", 41]]
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.558544"], ["deadline", "2014-11-19 09:10:54.000000"], ["statement", "Natus placeat et ipsam doloremque est maxime aliquam sed."], ["updated_at", "2014-11-26 23:31:09.558544"], ["user_id", 44]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.568909"], ["deadline", "2014-11-19 20:05:40.000000"], ["statement", "Asperiores in molestiae sapiente voluptatem natus temporibus excepturi aperiam."], ["updated_at", "2014-11-26 23:31:09.568909"], ["user_id", 50]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.578724"], ["deadline", "2014-12-02 19:45:09.000000"], ["statement", "Sint eum consequatur a tenetur id excepturi reiciendis ducimus."], ["updated_at", "2014-11-26 23:31:09.578724"], ["user_id", 49]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.590362"], ["deadline", "2014-11-20 03:28:36.000000"], ["statement", "Quia rem perspiciatis ut ullam et assumenda eum."], ["updated_at", "2014-11-26 23:31:09.590362"], ["user_id", 45]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.602848"], ["deadline", "2014-11-27 15:59:02.000000"], ["statement", "Vel ea quis voluptas neque non nostrum ipsam asperiores."], ["updated_at", "2014-11-26 23:31:09.602848"], ["user_id", 44]]
+  [1m[35m (13.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.623529"], ["deadline", "2014-11-17 02:30:25.000000"], ["statement", "Non odit aspernatur laborum quis adipisci laudantium consequatur."], ["updated_at", "2014-11-26 23:31:09.623529"], ["user_id", 43]]
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.635505"], ["deadline", "2014-12-05 16:31:56.000000"], ["statement", "Quisquam facere recusandae quidem ipsam."], ["updated_at", "2014-11-26 23:31:09.635505"], ["user_id", 45]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.647237"], ["deadline", "2014-11-30 11:35:26.000000"], ["statement", "Qui est perferendis dolores sunt reprehenderit."], ["updated_at", "2014-11-26 23:31:09.647237"], ["user_id", 45]]
+  [1m[35m (3.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.656383"], ["deadline", "2014-11-27 12:32:42.000000"], ["statement", "Consequatur aut assumenda excepturi sunt debitis blanditiis et."], ["updated_at", "2014-11-26 23:31:09.656383"], ["user_id", 45]]
+  [1m[35m (6.1ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.668440"], ["deadline", "2014-12-06 20:24:18.000000"], ["statement", "Debitis aut facere molestiae magnam qui quas corrupti consequuntur."], ["updated_at", "2014-11-26 23:31:09.668440"], ["user_id", 48]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.678715"], ["deadline", "2014-12-03 14:25:33.000000"], ["statement", "Dolorem in doloribus officia."], ["updated_at", "2014-11-26 23:31:09.678715"], ["user_id", 48]]
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.691203"], ["deadline", "2014-11-30 05:23:26.000000"], ["statement", "Hic sit a omnis dicta perferendis."], ["updated_at", "2014-11-26 23:31:09.691203"], ["user_id", 46]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.701975"], ["deadline", "2014-12-04 13:27:16.000000"], ["statement", "Ex velit repellat vitae dolores facere culpa ipsam."], ["updated_at", "2014-11-26 23:31:09.701975"], ["user_id", 44]]
+  [1m[35m (4.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.712609"], ["deadline", "2014-11-24 10:52:04.000000"], ["statement", "In dolorum deleniti officia blanditiis aliquam pariatur."], ["updated_at", "2014-11-26 23:31:09.712609"], ["user_id", 49]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.723743"], ["deadline", "2014-11-23 22:48:14.000000"], ["statement", "Suscipit voluptatem corrupti atque asperiores."], ["updated_at", "2014-11-26 23:31:09.723743"], ["user_id", 42]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36mPrediction Load (10.5ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.760661"], ["prediction_id", 64], ["probability", 78], ["updated_at", "2014-11-26 23:31:09.760661"], ["user_id", 43]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.777488"], ["prediction_id", 42], ["probability", 37], ["updated_at", "2014-11-26 23:31:09.777488"], ["user_id", 42]]
+  [1m[35m (6.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.788436"], ["prediction_id", 66], ["probability", 76], ["updated_at", "2014-11-26 23:31:09.788436"], ["user_id", 47]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.799589"], ["prediction_id", 80], ["probability", 77], ["updated_at", "2014-11-26 23:31:09.799589"], ["user_id", 46]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.810592"], ["prediction_id", 57], ["probability", 66], ["updated_at", "2014-11-26 23:31:09.810592"], ["user_id", 49]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.820949"], ["prediction_id", 74], ["probability", 14], ["updated_at", "2014-11-26 23:31:09.820949"], ["user_id", 49]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.832427"], ["prediction_id", 57], ["probability", 21], ["updated_at", "2014-11-26 23:31:09.832427"], ["user_id", 49]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.843222"], ["prediction_id", 43], ["probability", 69], ["updated_at", "2014-11-26 23:31:09.843222"], ["user_id", 49]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.854716"], ["prediction_id", 65], ["probability", 56], ["updated_at", "2014-11-26 23:31:09.854716"], ["user_id", 46]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.865745"], ["prediction_id", 61], ["probability", 39], ["updated_at", "2014-11-26 23:31:09.865745"], ["user_id", 45]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.876991"], ["prediction_id", 63], ["probability", 41], ["updated_at", "2014-11-26 23:31:09.876991"], ["user_id", 45]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.888142"], ["prediction_id", 73], ["probability", 47], ["updated_at", "2014-11-26 23:31:09.888142"], ["user_id", 45]]
+  [1m[35m (6.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.898730"], ["prediction_id", 80], ["probability", 23], ["updated_at", "2014-11-26 23:31:09.898730"], ["user_id", 46]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.910570"], ["prediction_id", 61], ["probability", 67], ["updated_at", "2014-11-26 23:31:09.910570"], ["user_id", 42]]
+  [1m[35m (6.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.920948"], ["prediction_id", 52], ["probability", 8], ["updated_at", "2014-11-26 23:31:09.920948"], ["user_id", 47]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.932420"], ["prediction_id", 43], ["probability", 84], ["updated_at", "2014-11-26 23:31:09.932420"], ["user_id", 45]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.943212"], ["prediction_id", 50], ["probability", 5], ["updated_at", "2014-11-26 23:31:09.943212"], ["user_id", 48]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.954725"], ["prediction_id", 54], ["probability", 91], ["updated_at", "2014-11-26 23:31:09.954725"], ["user_id", 47]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.965861"], ["prediction_id", 81], ["probability", 72], ["updated_at", "2014-11-26 23:31:09.965861"], ["user_id", 43]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.976564"], ["prediction_id", 61], ["probability", 2], ["updated_at", "2014-11-26 23:31:09.976564"], ["user_id", 50]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:09.988108"], ["prediction_id", 84], ["probability", 26], ["updated_at", "2014-11-26 23:31:09.988108"], ["user_id", 42]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:09.999349"], ["prediction_id", 63], ["probability", 78], ["updated_at", "2014-11-26 23:31:09.999349"], ["user_id", 49]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.009833"], ["prediction_id", 81], ["probability", 90], ["updated_at", "2014-11-26 23:31:10.009833"], ["user_id", 41]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.021398"], ["prediction_id", 43], ["probability", 54], ["updated_at", "2014-11-26 23:31:10.021398"], ["user_id", 44]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.032887"], ["prediction_id", 86], ["probability", 10], ["updated_at", "2014-11-26 23:31:10.032887"], ["user_id", 43]]
+  [1m[36m (7.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.043227"], ["prediction_id", 69], ["probability", 8], ["updated_at", "2014-11-26 23:31:10.043227"], ["user_id", 49]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.054767"], ["prediction_id", 49], ["probability", 1], ["updated_at", "2014-11-26 23:31:10.054767"], ["user_id", 42]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.065593"], ["prediction_id", 80], ["probability", 20], ["updated_at", "2014-11-26 23:31:10.065593"], ["user_id", 47]]
+  [1m[35m (7.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.077001"], ["prediction_id", 52], ["probability", 78], ["updated_at", "2014-11-26 23:31:10.077001"], ["user_id", 50]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.088122"], ["prediction_id", 53], ["probability", 62], ["updated_at", "2014-11-26 23:31:10.088122"], ["user_id", 41]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.099531"], ["prediction_id", 62], ["probability", 0], ["updated_at", "2014-11-26 23:31:10.099531"], ["user_id", 48]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.109800"], ["prediction_id", 76], ["probability", 74], ["updated_at", "2014-11-26 23:31:10.109800"], ["user_id", 45]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.121378"], ["prediction_id", 81], ["probability", 71], ["updated_at", "2014-11-26 23:31:10.121378"], ["user_id", 47]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.132143"], ["prediction_id", 68], ["probability", 42], ["updated_at", "2014-11-26 23:31:10.132143"], ["user_id", 47]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.143555"], ["prediction_id", 53], ["probability", 97], ["updated_at", "2014-11-26 23:31:10.143555"], ["user_id", 48]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.155417"], ["prediction_id", 49], ["probability", 32], ["updated_at", "2014-11-26 23:31:10.155417"], ["user_id", 42]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.165815"], ["prediction_id", 60], ["probability", 77], ["updated_at", "2014-11-26 23:31:10.165815"], ["user_id", 42]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.176901"], ["prediction_id", 86], ["probability", 26], ["updated_at", "2014-11-26 23:31:10.176901"], ["user_id", 44]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.188056"], ["prediction_id", 84], ["probability", 40], ["updated_at", "2014-11-26 23:31:10.188056"], ["user_id", 50]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.198696"], ["prediction_id", 62], ["probability", 6], ["updated_at", "2014-11-26 23:31:10.198696"], ["user_id", 46]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.210322"], ["prediction_id", 44], ["probability", 45], ["updated_at", "2014-11-26 23:31:10.210322"], ["user_id", 41]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.221178"], ["prediction_id", 45], ["probability", 3], ["updated_at", "2014-11-26 23:31:10.221178"], ["user_id", 45]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.232677"], ["prediction_id", 51], ["probability", 61], ["updated_at", "2014-11-26 23:31:10.232677"], ["user_id", 50]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.243869"], ["prediction_id", 82], ["probability", 3], ["updated_at", "2014-11-26 23:31:10.243869"], ["user_id", 44]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.254486"], ["prediction_id", 41], ["probability", 91], ["updated_at", "2014-11-26 23:31:10.254486"], ["user_id", 45]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.266024"], ["prediction_id", 60], ["probability", 69], ["updated_at", "2014-11-26 23:31:10.266024"], ["user_id", 42]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.277144"], ["prediction_id", 54], ["probability", 47], ["updated_at", "2014-11-26 23:31:10.277144"], ["user_id", 45]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.287866"], ["prediction_id", 59], ["probability", 67], ["updated_at", "2014-11-26 23:31:10.287866"], ["user_id", 47]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.299501"], ["prediction_id", 67], ["probability", 48], ["updated_at", "2014-11-26 23:31:10.299501"], ["user_id", 49]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.311491"], ["prediction_id", 68], ["probability", 13], ["updated_at", "2014-11-26 23:31:10.311491"], ["user_id", 46]]
+  [1m[35m (6.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.321860"], ["prediction_id", 52], ["probability", 94], ["updated_at", "2014-11-26 23:31:10.321860"], ["user_id", 42]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.332238"], ["prediction_id", 55], ["probability", 23], ["updated_at", "2014-11-26 23:31:10.332238"], ["user_id", 41]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.343824"], ["prediction_id", 64], ["probability", 32], ["updated_at", "2014-11-26 23:31:10.343824"], ["user_id", 49]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.354547"], ["prediction_id", 75], ["probability", 94], ["updated_at", "2014-11-26 23:31:10.354547"], ["user_id", 43]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.365967"], ["prediction_id", 72], ["probability", 14], ["updated_at", "2014-11-26 23:31:10.365967"], ["user_id", 50]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.377331"], ["prediction_id", 51], ["probability", 88], ["updated_at", "2014-11-26 23:31:10.377331"], ["user_id", 50]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.388238"], ["prediction_id", 44], ["probability", 3], ["updated_at", "2014-11-26 23:31:10.388238"], ["user_id", 47]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.399421"], ["prediction_id", 85], ["probability", 70], ["updated_at", "2014-11-26 23:31:10.399421"], ["user_id", 45]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.410145"], ["prediction_id", 74], ["probability", 24], ["updated_at", "2014-11-26 23:31:10.410145"], ["user_id", 44]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.421569"], ["prediction_id", 68], ["probability", 47], ["updated_at", "2014-11-26 23:31:10.421569"], ["user_id", 50]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.432274"], ["prediction_id", 47], ["probability", 93], ["updated_at", "2014-11-26 23:31:10.432274"], ["user_id", 45]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.443750"], ["prediction_id", 63], ["probability", 32], ["updated_at", "2014-11-26 23:31:10.443750"], ["user_id", 41]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.454941"], ["prediction_id", 66], ["probability", 60], ["updated_at", "2014-11-26 23:31:10.454941"], ["user_id", 46]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.465680"], ["prediction_id", 48], ["probability", 53], ["updated_at", "2014-11-26 23:31:10.465680"], ["user_id", 45]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.477170"], ["prediction_id", 72], ["probability", 48], ["updated_at", "2014-11-26 23:31:10.477170"], ["user_id", 41]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.488386"], ["prediction_id", 85], ["probability", 6], ["updated_at", "2014-11-26 23:31:10.488386"], ["user_id", 45]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.499010"], ["prediction_id", 51], ["probability", 34], ["updated_at", "2014-11-26 23:31:10.499010"], ["user_id", 41]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.510645"], ["prediction_id", 65], ["probability", 74], ["updated_at", "2014-11-26 23:31:10.510645"], ["user_id", 45]]
+  [1m[35m (7.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.521581"], ["prediction_id", 39], ["probability", 41], ["updated_at", "2014-11-26 23:31:10.521581"], ["user_id", 42]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.532744"], ["prediction_id", 81], ["probability", 14], ["updated_at", "2014-11-26 23:31:10.532744"], ["user_id", 43]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.544155"], ["prediction_id", 53], ["probability", 73], ["updated_at", "2014-11-26 23:31:10.544155"], ["user_id", 44]]
+  [1m[36m (7.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.554973"], ["prediction_id", 88], ["probability", 66], ["updated_at", "2014-11-26 23:31:10.554973"], ["user_id", 45]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.566090"], ["prediction_id", 63], ["probability", 77], ["updated_at", "2014-11-26 23:31:10.566090"], ["user_id", 48]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.576768"], ["prediction_id", 79], ["probability", 22], ["updated_at", "2014-11-26 23:31:10.576768"], ["user_id", 41]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.588236"], ["prediction_id", 75], ["probability", 25], ["updated_at", "2014-11-26 23:31:10.588236"], ["user_id", 47]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.601084"], ["prediction_id", 55], ["probability", 48], ["updated_at", "2014-11-26 23:31:10.601084"], ["user_id", 42]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.610533"], ["prediction_id", 72], ["probability", 55], ["updated_at", "2014-11-26 23:31:10.610533"], ["user_id", 44]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.621624"], ["prediction_id", 64], ["probability", 22], ["updated_at", "2014-11-26 23:31:10.621624"], ["user_id", 42]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.632782"], ["prediction_id", 66], ["probability", 65], ["updated_at", "2014-11-26 23:31:10.632782"], ["user_id", 41]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.643494"], ["prediction_id", 87], ["probability", 89], ["updated_at", "2014-11-26 23:31:10.643494"], ["user_id", 45]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.655029"], ["prediction_id", 54], ["probability", 18], ["updated_at", "2014-11-26 23:31:10.655029"], ["user_id", 41]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.665660"], ["prediction_id", 41], ["probability", 64], ["updated_at", "2014-11-26 23:31:10.665660"], ["user_id", 45]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.677153"], ["prediction_id", 79], ["probability", 33], ["updated_at", "2014-11-26 23:31:10.677153"], ["user_id", 50]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.688297"], ["prediction_id", 73], ["probability", 37], ["updated_at", "2014-11-26 23:31:10.688297"], ["user_id", 43]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.698962"], ["prediction_id", 60], ["probability", 50], ["updated_at", "2014-11-26 23:31:10.698962"], ["user_id", 47]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.710500"], ["prediction_id", 49], ["probability", 69], ["updated_at", "2014-11-26 23:31:10.710500"], ["user_id", 45]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.721771"], ["prediction_id", 80], ["probability", 50], ["updated_at", "2014-11-26 23:31:10.721771"], ["user_id", 41]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.732377"], ["prediction_id", 42], ["probability", 19], ["updated_at", "2014-11-26 23:31:10.732377"], ["user_id", 49]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.743889"], ["prediction_id", 73], ["probability", 36], ["updated_at", "2014-11-26 23:31:10.743889"], ["user_id", 41]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.754608"], ["prediction_id", 83], ["probability", 54], ["updated_at", "2014-11-26 23:31:10.754608"], ["user_id", 48]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.765728"], ["prediction_id", 51], ["probability", 35], ["updated_at", "2014-11-26 23:31:10.765728"], ["user_id", 49]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.777352"], ["prediction_id", 50], ["probability", 62], ["updated_at", "2014-11-26 23:31:10.777352"], ["user_id", 50]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.788590"], ["prediction_id", 80], ["probability", 5], ["updated_at", "2014-11-26 23:31:10.788590"], ["user_id", 42]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.798993"], ["prediction_id", 51], ["probability", 87], ["updated_at", "2014-11-26 23:31:10.798993"], ["user_id", 49]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.810575"], ["prediction_id", 68], ["probability", 75], ["updated_at", "2014-11-26 23:31:10.810575"], ["user_id", 44]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.821256"], ["prediction_id", 79], ["probability", 76], ["updated_at", "2014-11-26 23:31:10.821256"], ["user_id", 41]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.832741"], ["prediction_id", 43], ["probability", 50], ["updated_at", "2014-11-26 23:31:10.832741"], ["user_id", 42]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.844299"], ["prediction_id", 56], ["probability", 21], ["updated_at", "2014-11-26 23:31:10.844299"], ["user_id", 45]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.855034"], ["prediction_id", 51], ["probability", 25], ["updated_at", "2014-11-26 23:31:10.855034"], ["user_id", 43]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.866067"], ["prediction_id", 58], ["probability", 23], ["updated_at", "2014-11-26 23:31:10.866067"], ["user_id", 42]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.877243"], ["prediction_id", 82], ["probability", 31], ["updated_at", "2014-11-26 23:31:10.877243"], ["user_id", 44]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.887865"], ["prediction_id", 57], ["probability", 71], ["updated_at", "2014-11-26 23:31:10.887865"], ["user_id", 50]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.899502"], ["prediction_id", 55], ["probability", 17], ["updated_at", "2014-11-26 23:31:10.899502"], ["user_id", 43]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.910144"], ["prediction_id", 51], ["probability", 24], ["updated_at", "2014-11-26 23:31:10.910144"], ["user_id", 45]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.921628"], ["prediction_id", 53], ["probability", 62], ["updated_at", "2014-11-26 23:31:10.921628"], ["user_id", 42]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.932913"], ["prediction_id", 83], ["probability", 64], ["updated_at", "2014-11-26 23:31:10.932913"], ["user_id", 46]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.943470"], ["prediction_id", 43], ["probability", 68], ["updated_at", "2014-11-26 23:31:10.943470"], ["user_id", 43]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.955153"], ["prediction_id", 76], ["probability", 82], ["updated_at", "2014-11-26 23:31:10.955153"], ["user_id", 43]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.966683"], ["prediction_id", 79], ["probability", 16], ["updated_at", "2014-11-26 23:31:10.966683"], ["user_id", 49]]
+  [1m[36m (7.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.977805"], ["prediction_id", 74], ["probability", 64], ["updated_at", "2014-11-26 23:31:10.977805"], ["user_id", 46]]
+  [1m[35m (7.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:10.988107"], ["prediction_id", 68], ["probability", 76], ["updated_at", "2014-11-26 23:31:10.988107"], ["user_id", 47]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:10.999689"], ["prediction_id", 69], ["probability", 96], ["updated_at", "2014-11-26 23:31:10.999689"], ["user_id", 46]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.010285"], ["prediction_id", 87], ["probability", 69], ["updated_at", "2014-11-26 23:31:11.010285"], ["user_id", 41]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.021992"], ["prediction_id", 70], ["probability", 65], ["updated_at", "2014-11-26 23:31:11.021992"], ["user_id", 46]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.032959"], ["prediction_id", 41], ["probability", 93], ["updated_at", "2014-11-26 23:31:11.032959"], ["user_id", 46]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.044119"], ["prediction_id", 41], ["probability", 93], ["updated_at", "2014-11-26 23:31:11.044119"], ["user_id", 41]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.055248"], ["prediction_id", 67], ["probability", 67], ["updated_at", "2014-11-26 23:31:11.055248"], ["user_id", 50]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.066302"], ["prediction_id", 50], ["probability", 14], ["updated_at", "2014-11-26 23:31:11.066302"], ["user_id", 41]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.077544"], ["prediction_id", 41], ["probability", 98], ["updated_at", "2014-11-26 23:31:11.077544"], ["user_id", 45]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.088546"], ["prediction_id", 59], ["probability", 49], ["updated_at", "2014-11-26 23:31:11.088546"], ["user_id", 49]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.099895"], ["prediction_id", 75], ["probability", 14], ["updated_at", "2014-11-26 23:31:11.099895"], ["user_id", 48]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.110265"], ["prediction_id", 53], ["probability", 54], ["updated_at", "2014-11-26 23:31:11.110265"], ["user_id", 41]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.121905"], ["prediction_id", 78], ["probability", 44], ["updated_at", "2014-11-26 23:31:11.121905"], ["user_id", 50]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 23:31:11.133008"], ["prediction_id", 88], ["probability", 39], ["updated_at", "2014-11-26 23:31:11.133008"], ["user_id", 47]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 23:31:11.143636"], ["prediction_id", 50], ["probability", 49], ["updated_at", "2014-11-26 23:31:11.143636"], ["user_id", 49]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 115ms (Views: 113.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:31:16 -0800
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 15:31:18 -0800
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (1.2ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (25.4ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 205ms (Views: 201.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 15:31:23 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-26 15:31:23 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 160ms (Views: 158.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-26 15:31:24 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[36mPrediction Load (0.9ms)[0m  [1mSELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')[0m
+  Rendered predictions/undetermined.html.erb within layouts/application (14.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 201ms (Views: 197.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/predictions/40" for 127.0.0.1 at 2014-11-26 15:31:29 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mPrediction Load (0.8ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 40]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mWager Load (23.9ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 40]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 43]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 42]]
+  Rendered predictions/show.html.erb within layouts/application (43.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 204ms (Views: 173.7ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/predictions/41" for 127.0.0.1 at 2014-11-26 15:31:33 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mPrediction Load (0.5ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 45]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 41]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 45]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  Rendered predictions/show.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 147ms (Views: 140.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/predictions/53" for 127.0.0.1 at 2014-11-26 15:31:36 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[35mPrediction Load (0.4ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 53]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 53]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 45]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 43]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 41]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 48]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 41]]
+  Rendered predictions/show.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 129ms (Views: 122.6ms | ActiveRecord: 3.4ms)

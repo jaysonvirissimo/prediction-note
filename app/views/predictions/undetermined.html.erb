@@ -11,7 +11,7 @@
     <% count = 0 %>
 
     <% @predictions.each do |prediction| %>
-      <% if prediction.deadline > Time.now %>
+      <% if prediction.deadline < Time.now %>
         <% count += 1 %>
         <tr>
           <td><%= count %></td>

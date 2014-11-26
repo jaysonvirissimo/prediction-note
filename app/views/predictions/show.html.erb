@@ -2,9 +2,16 @@
   <h2><%= @prediction.statement %></h2>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
-    The outcome will be known in
-    <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
-  </h5>
+  <% if @prediction.deadline < Time.now %>
+  The outcome was known
+  <%= distance_of_time_in_words(@prediction.deadline, Time.now) %> ago.
+  <% else %>
+  The outcome will be known in
+  <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
+  <% end %>
+</h5>
+
+
   <h6>Predictor: <%= link_to(@prediction.user.username, @prediction.user) %></h6>
 </div>
 
