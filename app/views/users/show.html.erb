@@ -1,0 +1,26 @@
+<u><h1><%= @user.username %>'s Statistics</h1></u>
+
+<br>
+
+<h3>Calibration Graph</h3>
+
+<br>
+
+<h3>Most Recent Predictions</h3>
+<ul>
+<% @user.predictions.each do |prediction| %>
+<li><%= link_to(prediction.statement, predictions_url(prediction)) %></li>
+<% end %>
+</ul>
+
+<br>
+
+<h3>Most Recent Wagers</h3>
+<ul>
+  <% @user.wagers.each do |wager| %>
+  <li>
+    <%= link_to(wager.prediction.statement, predictions_url(wager.prediction)) %>
+    <%= wager.probability %>%
+  </li>
+  <% end %>
+</ul>
