@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
     if @user
       sign_in(@user)
-      redirect_to predictions_url
+      redirect_to user_url(@user)
     else
       flash.now[:errors] = ['Invalid username, password, or both.']
       render :new
