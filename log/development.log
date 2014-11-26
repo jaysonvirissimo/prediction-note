@@ -20179,3 +20179,12 @@ Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 12:05:09 -080
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 12:05:09 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (21.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJudgments (20141126212736)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (291.1ms)[0m  [1mCREATE TABLE "judgments" ("id" serial primary key, "prediction_id" integer NOT NULL, "user_id" integer NOT NULL, "status" character varying(255) DEFAULT 'undetermined', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (63.1ms)[0m  CREATE  INDEX  "index_judgments_on_prediction_id" ON "judgments"  ("prediction_id")
+  [1m[36m (65.2ms)[0m  [1mCREATE  INDEX  "index_judgments_on_user_id" ON "judgments"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141126212736"]]
+  [1m[36m (18.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
