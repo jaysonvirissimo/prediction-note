@@ -27,6 +27,10 @@ def create_wagers(number)
   end
 end
 
+def create_judgments(number)
+  
+end
+
 create_users(5)
 create_predictions(25)
 create_wagers(125)
