@@ -6,6 +6,11 @@ class PredictionsController < ApplicationController
     render :index
   end
 
+  def undetermined
+    @predictions = Prediction.where("judged = ?", false)
+    render :undetermined
+  end
+
   def new
     render :new
   end

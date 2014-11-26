@@ -6,8 +6,4 @@ class Judgment < ActiveRecord::Base
 
   belongs_to(:user)
   belongs_to(:prediction)
-
-  def judged?
-    self.status != "undetermined"
-  end
 end

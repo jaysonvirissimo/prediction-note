@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'users#home'
+  get '/undetermined' => 'predictions#undetermined'
 
   resource :session, only: [:create, :destroy, :new]
 

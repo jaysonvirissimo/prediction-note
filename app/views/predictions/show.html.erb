@@ -1,5 +1,5 @@
 <div>
-  <h3><em><%= @prediction.statement %></em></h3>
+  <h3><%= @prediction.statement %></h3>
   <h5>
     The outcome will be known in
     <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
