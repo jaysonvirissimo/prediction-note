@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
   has_many(:wagers)
   has_many(:predictions)
+  has_many(:judgments)
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
