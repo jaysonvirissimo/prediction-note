@@ -1,22 +1,37 @@
-<h1>Sign In</h1>
-
-<form action="<%= session_url %>" method="post">
+<form class="form-horizontal" action="<%= session_url %>" method="post">
 
   <input type="hidden"
-         name="authenticity_token"
-         value="<%= form_authenticity_token %>">
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>">
 
-  <div class="form-group">
-    <label>
-      Username
-      <input type="text" name="user[username]" class="form-control" value="">
-    </label>
-    <br>
-    <label>
-      Password
-      <input type="password" name="user[password]" class="form-control" value="">
-    </label>
-  </div>
+  <fieldset>
+    <legend><h1>Sign Into An Existing Account</h1></legend>
+    <div class="form-group">
+      <label for="inputUsername" class="col-lg-2 control-label">Username</label>
+      <div class="col-lg-10">
+        <input type="text"
+        class="form-control"
+        id="inputUsername"
+        placeholder="Your username goes here."
+        name="user[username]">
+      </div>
+    </div>
 
-  <input type="submit" value="Sign In" class="btn-default">
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password"
+        class="form-control"
+        id="inputPassword"
+        placeholder="Your password goes here."
+        name="user[password]">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
 </form>
