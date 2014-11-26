@@ -14466,3 +14466,558 @@ Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 10:56:48 -080
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:56:48 -0800
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 10:57:25 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-26 10:57:25 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 119ms (Views: 117.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 10:57:27 -0800
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (1.4ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (14.9ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 173ms (Views: 170.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 10:57:28 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-26 10:57:28 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 124ms (Views: 121.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-26 10:57:32 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-26 10:57:41 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"N06kmUVjyVpyYs3bYCLADii7+vqDkl/BCbXYUvNLMAI=", "user"=>{"username"=>"dudemang", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (42.6ms)[0m  [1mINSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 18:57:42.529706"], ["password_digest", "$2a$10$M5g3B5u73ryeSlKoHt1L9.jHTP86wxQ4RJ3czg/dNQxJwGHrgaIe2"], ["session_token", "7-6gGYNenETMO3r0v8kFjg"], ["updated_at", "2014-11-26 18:57:42.529706"], ["username", "dudemang"]]
+  [1m[35m (25.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = 39  [["session_token", "OyA_BpwfmT5nlKUSlx3jrw"], ["updated_at", "2014-11-26 18:57:42.602884"]]
+  [1m[36m (7.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/predictions
+Completed 302 Found in 752ms (ActiveRecord: 76.1ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT "predictions".* FROM "predictions"
+  Rendered predictions/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (12.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 151ms (Views: 137.6ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:42 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:43 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:43 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:43 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:43 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:57:43 -0800
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 10:57:46 -0800
+Processing by PredictionsController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+  Rendered predictions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 107ms (Views: 102.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:57:51 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 150ms (Views: 147.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 10:57:52 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT "predictions".* FROM "predictions"
+  Rendered predictions/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 139ms (Views: 136.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 10:57:54 -0800
+Processing by PredictionsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+  Rendered predictions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/predictions" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+Processing by PredictionsController#create as HTML
+  Parameters: {"authenticity_token"=>"N06kmUVjyVpyYs3bYCLADii7+vqDkl/BCbXYUvNLMAI=", "prediction"=>{"statement"=>"Dude, this will totally happen, mang.", "deadline"=>"in one year"}}
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "predictions" ("created_at", "deadline", "statement", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-11-26 18:58:14.448204"], ["deadline", "2015-11-26 18:58:14.000000"], ["statement", "Dude, this will totally happen, mang."], ["updated_at", "2014-11-26 18:58:14.448204"], ["user_id", 39]]
+  [1m[35m (60.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/predictions.36
+Completed 302 Found in 110ms (ActiveRecord: 63.5ms)
+
+
+Started GET "/predictions.36" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+Processing by PredictionsController#index as 
+  [1m[36mPrediction Load (3.1ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (17.5ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+Completed 200 OK in 164ms (Views: 159.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:14 -0800
+
+
+Started GET "/predictions/36" for 127.0.0.1 at 2014-11-26 10:58:18 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mPrediction Load (0.5ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mWager Load (0.6ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 36]]
+  Rendered predictions/show.html.erb within layouts/application (23.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+Completed 200 OK in 181ms (Views: 173.2ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/wagers" for 127.0.0.1 at 2014-11-26 10:58:26 -0800
+Processing by WagersController#create as HTML
+  Parameters: {"authenticity_token"=>"N06kmUVjyVpyYs3bYCLADii7+vqDkl/BCbXYUvNLMAI=", "wager"=>{"prediction_id"=>"36", "probability"=>"50"}}
+  [1m[36mPrediction Load (0.7ms)[0m  [1mSELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "wagers" ("created_at", "prediction_id", "probability", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-11-26 18:58:27.062439"], ["prediction_id", 36], ["probability", 50], ["updated_at", "2014-11-26 18:58:27.062439"], ["user_id", 39]]
+  [1m[36m (24.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/predictions/36
+Completed 302 Found in 97ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/predictions/36" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mPrediction Load (0.4ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 36]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 39]]
+  Rendered predictions/show.html.erb within layouts/application (9.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+Completed 200 OK in 169ms (Views: 164.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 10:58:27 -0800
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 10:58:30 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+  Rendered predictions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 10:58:31 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (0.6ms)[0m  SELECT "predictions".* FROM "predictions"
+  Rendered predictions/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 114ms (Views: 111.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:58:31 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+Completed 200 OK in 122ms (Views: 120.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:00:12 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:13 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+Completed 200 OK in 137ms (Views: 135.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:30 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1[0m
+Completed 200 OK in 166ms (Views: 163.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:50 -0800
+
+
+Started DELETE "/session" for 127.0.0.1 at 2014-11-26 11:00:56 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N06kmUVjyVpyYs3bYCLADii7+vqDkl/BCbXYUvNLMAI="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" = 'OyA_BpwfmT5nlKUSlx3jrw' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = 39  [["session_token", "49p7ACzN6GQPFRYV0p0XDQ"], ["updated_at", "2014-11-26 19:00:56.566144"]]
+  [1m[36m (496.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 511ms (ActiveRecord: 498.5ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 142ms (Views: 140.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/predictions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/wagers.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/predictions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/wagers.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 11:00:57 -0800
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-26 11:01:03 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-26 11:01:03 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 154ms (Views: 152.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-26 11:01:04 -0800
+Processing by PredictionsController#index as HTML
+  [1m[36mPrediction Load (0.8ms)[0m  [1mSELECT "predictions".* FROM "predictions"[0m
+  Rendered predictions/index.html.erb within layouts/application (10.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 119ms (Views: 116.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 11:01:05 -0800
+Processing by UsersController#home as HTML
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 180ms (Views: 178.1ms | ActiveRecord: 0.6ms)
