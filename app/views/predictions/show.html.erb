@@ -33,7 +33,7 @@
   <br>
 <% end %>
 
-<% if @prediction.deadline < Time.now %>
+<% if @prediction.deadline > Time.now %>
   <div class="form-group">
     <h4>Make a Wager</h4>
     <form action="<%= wagers_url %>" method="post">
