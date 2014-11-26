@@ -36,7 +36,7 @@
           <li><%= link_to("Statistics", users_url(current_user)) %></li>
           <li><a href="#">Settings</a></li>
           <li class="divider"></li>
-          <li><a href="#">Sign Out</a></li>
+          <li><%= link_to("Sign Out", session_url, :method => :delete) %></li>
         </ul>
       </li>
     </ul>
