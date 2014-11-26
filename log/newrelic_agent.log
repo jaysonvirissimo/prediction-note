@@ -137,3 +137,4 @@
 [11/26/14 11:12:20 -0800 Hobbes (7041)] INFO : Doing deferred dependency-detection before Rack startup
 [11/26/14 11:12:30 -0800 Hobbes (7041)] ERROR : Unknown license key
 [11/26/14 11:12:30 -0800 Hobbes (7041)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/26/14 12:05:20 -0800 Hobbes (7041)] INFO : Starting Agent shutdown
