@@ -30,6 +30,10 @@
     name="authenticity_token"
     value="<%= form_authenticity_token %>">
 
+    <input type="hidden"
+    name="wager[prediction_id]"
+    value="<%= @prediction.id %>">
+
     <label>
       Probability (0-100%)
       <input type="number"

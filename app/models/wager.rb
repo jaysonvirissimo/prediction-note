@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: wagers
+#
+#  id            :integer          not null, primary key
+#  prediction_id :integer          not null
+#  probability   :integer          not null
+#  user_id       :integer          not null
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class Wager < ActiveRecord::Base
   validates :user_id, :prediction_id, :probability, presence: true
   validates :probability, numericality: {
