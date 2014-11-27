@@ -1,4 +1,4 @@
-<h1>Fraction of Judged Predictions</h1>
+<h1>Fraction of Already Judged Predictions</h1>
 <% judged_fraction = @predictions.length.to_f / @prediction_count %>
 <div class="progress">
   <div class="progress-bar" style="width: <%= (judged_fraction * 100).to_i %>%;"></div>
@@ -23,7 +23,7 @@
         <tr>
           <td><%= count %></td>
           <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
-          <td><%= prediction.deadline %></td>
+          <td><%= distance_of_time_in_words(prediction.deadline, Time.now) %> ago</td>
         </tr>
       <% end %>
     <% end %>
