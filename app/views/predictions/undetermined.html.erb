@@ -1,3 +1,10 @@
+<h1>Fraction of Judged Predictions</h1>
+<% judged_fraction = @predictions.length.to_f / @prediction_count %>
+<div class="progress">
+  <div class="progress-bar" style="width: <%= (judged_fraction * 100).to_i %>%;"></div>
+</div>
+
+
 <h1>Overdue Predictions</h1>
 <table class="table table-striped table-hover ">
   <thead>

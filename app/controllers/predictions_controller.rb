@@ -7,6 +7,7 @@ class PredictionsController < ApplicationController
   end
 
   def undetermined
+    @prediction_count = Prediction.count
     @predictions = Prediction.where("judged = ?", false)
     render :undetermined
   end

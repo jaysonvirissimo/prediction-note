@@ -37,6 +37,36 @@
   <div class="form-group">
     <h4>Make a Wager</h4>
     <div class="well">
+      <form action="<%= wagers_url %>" method="post">
+
+        <input type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+        <input type="hidden"
+        name="wager[prediction_id]"
+        value="<%= @prediction.id %>">
+
+        <label>
+          Probability (0-100%)
+          <input type="number"
+                name="wager[probability]"
+                class="form-control"
+                value="50"
+                min="0"
+                max="100">
+        </label>
+        <br>
+
+        <input type="submit" value="Affirm!" class="btn-default">
+      </form>
+    </div>
+  </div>
+<% end %>
+
+<div class="form-group">
+  <h4>Make a Judgment</h4>
+  <div class="well">
     <form action="<%= wagers_url %>" method="post">
 
       <input type="hidden"
@@ -50,16 +80,15 @@
       <label>
         Probability (0-100%)
         <input type="number"
-              name="wager[probability]"
-              class="form-control"
-              value="50"
-              min="0"
-              max="100">
+        name="wager[probability]"
+        class="form-control"
+        value="50"
+        min="0"
+        max="100">
       </label>
       <br>
 
       <input type="submit" value="Affirm!" class="btn-default">
     </form>
   </div>
-  </div>
-<% end %>
+</div>
