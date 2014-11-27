@@ -3,11 +3,11 @@
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
   <% if @prediction.deadline < Time.now %>
-  The outcome was known
-  <%= distance_of_time_in_words(@prediction.deadline, Time.now) %> ago.
+    The outcome was known
+    <%= distance_of_time_in_words(@prediction.deadline, Time.now) %> ago.
   <% else %>
-  The outcome will be known in
-  <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
+    The outcome will be known in
+    <%= distance_of_time_in_words(@prediction.deadline, Time.now) %>.
   <% end %>
 </h5>
 
@@ -67,11 +67,10 @@
 <div class="form-group">
   <h4>Make a Judgment</h4>
   <div class="well">
-    <ul class="nav nav-pills">
-      <li><a href="#">Verified</a></li>
-      <li><a href="#">Falsified</a></li>
-      <li><a href="#">Undetermined</a></li>
-    </ul>
-    </form>
+    <div class="btn-group btn-group-justified">
+      <a href="#" class="btn btn-success">Verified</a>
+      <a href="#" class="btn btn-info">Undetermined</a>
+      <a href="#" class="btn btn-danger">Falsified</a>
+    </div>
   </div>
 </div>
