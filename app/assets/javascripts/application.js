@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require prediction_note
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .

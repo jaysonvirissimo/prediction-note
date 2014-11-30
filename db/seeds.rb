@@ -1,6 +1,6 @@
 def create_users(number)
   number.times do
-    User.create!(username: Faker::Internet.user_name, password: "password")
+    User.create!(username: Faker::Internet.user_name, password: 'password')
   end
 end
 
@@ -27,8 +27,7 @@ def create_wagers(number)
   end
 end
 
-def create_judgments(number)
-  
+def create_judgments(_number)
 end
 
 create_users(5)

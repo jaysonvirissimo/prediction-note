@@ -13,6 +13,7 @@ gem 'chronic'
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'newrelic_rpm'
+gem 'backbone-on-rails'
 
 group :devemopment, :test do
   gem 'spring'

@@ -1,5 +1,25 @@
+<script>
+$(document).ready(function () {
+  $('.btn-success').on('click', function () {
+    $('#statement').removeClass('text-info');
+    $('#statement').removeClass('text-danger');
+    $('#statement').addClass('text-success');
+  });
+  $('.btn-info').on('click', function () {
+    $('#statement').addClass('text-info');
+    $('#statement').removeClass('text-danger');
+    $('#statement').removeClass('text-success');
+  });
+  $('.btn-danger').on('click', function () {
+    $('#statement').removeClass('text-info');
+    $('#statement').addClass('text-danger');
+    $('#statement').removeClass('text-success');
+  });
+});
+</script
+
 <div>
-  <h2><%= @prediction.statement %></h2>
+  <h2 id="statement"><%= @prediction.statement %></h2>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
   <% if @prediction.deadline < Time.now %>
@@ -33,7 +53,7 @@
   <br>
 <% end %>
 
-<% if @prediction.deadline > Time.now %>
+<% if @prediction.deadline > Time.now && signed_in? %>
   <div class="form-group">
     <h4>Make a Wager</h4>
     <div class="well">
@@ -64,13 +84,15 @@
   </div>
 <% end %>
 
-<div class="form-group">
-  <h4>Make a Judgment</h4>
-  <div class="well">
-    <div class="btn-group btn-group-justified">
-      <a href="#" class="btn btn-success">Verified</a>
-      <a href="#" class="btn btn-info">Undetermined</a>
-      <a href="#" class="btn btn-danger">Falsified</a>
+<% if signed_in? %>
+  <div class="form-group">
+    <h4>Make a Judgment</h4>
+    <div class="well">
+      <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-success">Verified</a>
+        <a href="#" class="btn btn-info">Undetermined</a>
+        <a href="#" class="btn btn-danger">Falsified</a>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

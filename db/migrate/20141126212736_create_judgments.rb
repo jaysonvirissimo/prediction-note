@@ -3,7 +3,7 @@ class CreateJudgments < ActiveRecord::Migration
     create_table :judgments do |t|
       t.integer :prediction_id, null: false
       t.integer :user_id, null: false
-      t.string :status, default: "undetermined"
+      t.string :status, default: 'undetermined'
 
       t.timestamps
     end
