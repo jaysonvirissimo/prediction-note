@@ -1,4 +1,6 @@
 class WagersController < ApplicationController
+  before_action :require_signed_in!
+
   def create
     @prediction = Prediction.find(wager_params[:prediction_id])
     @wager = current_user.wagers.new(wager_params)
@@ -8,7 +10,7 @@ class WagersController < ApplicationController
       redirect_to prediction_url(@prediction)
     else
       flash[:errors] = @wager.errors.full_messages
-      redirect_to predictions_url
+      redirect_to prediction_url(@prediction)
     end
   end
 
