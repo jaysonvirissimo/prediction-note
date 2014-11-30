@@ -8,9 +8,7 @@ class PredictionsController < ApplicationController
 
   def undetermined
     @prediction_count = Prediction.count
-    @predictions = Prediction.where("judged = ?", false).sort_by do |prediction|
-      prediction.deadline
-    end
+    @predictions = Prediction.where('judged = ?', false).sort_by(&:deadline)
 
     render :undetermined
   end

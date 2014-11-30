@@ -1,5 +1,5 @@
 class Judgment < ActiveRecord::Base
-  STATUS = ["undetermined", "falsified", "verified"]
+  STATUS = %w(undetermined falsified verified)
 
   validates :user_id, :prediction_id, presence: true
   validates :status, inclusion: { in: STATUS }
