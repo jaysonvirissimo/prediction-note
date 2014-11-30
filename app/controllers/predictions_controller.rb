@@ -18,10 +18,9 @@ class PredictionsController < ApplicationController
   end
 
   def create
-    parsed_datetime = Prediction.parse_datetime(params[:prediction][:deadline])
     @prediction = Prediction.new
     @prediction.statement = params[:prediction][:statement]
-    @prediction.deadline = parsed_datetime
+    @prediction.deadline = Prediction.parse_datetime(params[:prediction][:deadline])
     @prediction.user_id = current_user.id
 
     if @prediction.save
