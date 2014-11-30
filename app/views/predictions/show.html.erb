@@ -1,3 +1,23 @@
+<script>
+$(document).ready(function () {
+  $('.btn-success').on('click', function () {
+    $('.btn-success').addClass('active');
+    $('.btn-info').removeClass('active');
+    $('.btn-danger').removeClass('active');
+  });
+  $('.btn-info').on('click', function () {
+    $('.btn-success').removeClass('active');
+    $('.btn-info').addClass('active');
+    $('.btn-danger').removeClass('active');
+  });
+  $('.btn-danger').on('click', function () {
+    $('.btn-success').removeClass('active');
+    $('.btn-info').removeClass('active');
+    $('.btn-danger').addClass('active');
+  });
+});
+</script
+
 <div>
   <h2><%= @prediction.statement %></h2>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
