@@ -1,25 +1,25 @@
 <script>
 $(document).ready(function () {
   $('.btn-success').on('click', function () {
-    $('.btn-success').addClass('active');
-    $('.btn-info').removeClass('active');
-    $('.btn-danger').removeClass('active');
+    $('#statement').removeClass('text-info');
+    $('#statement').removeClass('text-danger');
+    $('#statement').addClass('text-success');
   });
   $('.btn-info').on('click', function () {
-    $('.btn-success').removeClass('active');
-    $('.btn-info').addClass('active');
-    $('.btn-danger').removeClass('active');
+    $('#statement').addClass('text-info');
+    $('#statement').removeClass('text-danger');
+    $('#statement').removeClass('text-success');
   });
   $('.btn-danger').on('click', function () {
-    $('.btn-success').removeClass('active');
-    $('.btn-info').removeClass('active');
-    $('.btn-danger').addClass('active');
+    $('#statement').removeClass('text-info');
+    $('#statement').addClass('text-danger');
+    $('#statement').removeClass('text-success');
   });
 });
 </script
 
 <div>
-  <h2><%= @prediction.statement %></h2>
+  <h2 id="statement"><%= @prediction.statement %></h2>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
   <% if @prediction.deadline < Time.now %>
