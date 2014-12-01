@@ -13,7 +13,7 @@
 <% else %>
 <ul>
   <% @user.predictions.each do |prediction| %>
-  <li><%= link_to(prediction.statement, predictions_url(prediction)) %></li>
+  <li><%= link_to(prediction.statement, prediction) %></li>
   <% end %>
 </ul>
 <% end %>
@@ -28,7 +28,7 @@
 <ul>
   <% @user.wagers.each do |wager| %>
   <li>
-    <%= link_to(wager.prediction.statement, predictions_url(wager.prediction)) %>
+    <%= link_to(wager.prediction.statement, wager.prediction) %>
     <%= wager.probability %>%
   </li>
   <% end %>
