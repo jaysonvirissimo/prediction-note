@@ -27,9 +27,24 @@ def create_wagers(number)
   end
 end
 
-def create_judgments(_number)
+def create_judgments(number)
+  predictions = Prediction.all.to_a
+  users = User.all.to_a
+
+  number.times do
+    prediction = predictions.sample
+    user = users.sample
+    Judgment.create!(
+      user_id: user.id,
+      prediction_id: prediction.id,
+      status: ["verified", "falsified"].sample
+    )
+    prediction.judged = true
+    prediction.save
+  end
 end
 
-create_users(5)
-create_predictions(25)
-create_wagers(125)
+create_users(16)
+create_predictions(64)
+create_wagers(128)
+create_judgments(64)

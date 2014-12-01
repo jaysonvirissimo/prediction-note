@@ -44,7 +44,7 @@
     <% @user.judgments.each do |judgment| %>
       <li>
         <%= link_to(judgment.prediction.statement, predictions_url(judgment.prediction)) %>
-        <%= wager.probability %> was <% judgment.status %>.
+        was <% judgment.status %>.
       </li>
     <% end %>
   </ul>
