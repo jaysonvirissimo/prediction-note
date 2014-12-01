@@ -32,7 +32,7 @@ $(document).ready(function () {
 
 
 <div>
-  <h2 id="statement"><%= @prediction.statement %></h2>
+  <h3 id="statement"><strong><em><%= @prediction.statement %></em></strong></h3>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
   <% if @prediction.deadline < Time.now %>
