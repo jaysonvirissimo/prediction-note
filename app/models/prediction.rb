@@ -21,6 +21,11 @@ class Prediction < ActiveRecord::Base
     Chronic.parse(string)
   end
 
+  def self.unjudged_count
+    # come up with more performant solution for this
+    Prediction.where('judged = ?', false).count
+  end
+
   def average_wager
     sum = 0
 
