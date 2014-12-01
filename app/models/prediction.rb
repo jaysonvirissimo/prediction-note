@@ -23,7 +23,7 @@ class Prediction < ActiveRecord::Base
 
   def self.unjudged_count
     # come up with more performant solution for this
-    Prediction.where('judged = ?', false).count
+    Prediction.where('judged = ? AND deadline < ?', false, Time.now).count
   end
 
   def average_wager
