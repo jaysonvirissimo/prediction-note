@@ -14,7 +14,10 @@
       <% count += 1 %>
       <tr>
         <td><%= count %></td>
-        <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+        <td>
+          <span class="text-info">⚫</span>
+          <%= link_to(prediction.statement, prediction_url(prediction)) %>
+        </td>
         <td><%= distance_of_time_in_words(prediction.deadline, Time.now) %> ago</td>
       </tr>
     <% end %>
