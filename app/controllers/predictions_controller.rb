@@ -31,6 +31,7 @@ class PredictionsController < ApplicationController
 
   def show
     @prediction = Prediction.find(params[:id])
+    @judgment = @prediction.judgments.last
     render :show
   end
 end

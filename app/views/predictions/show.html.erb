@@ -9,12 +9,17 @@
   </div>
 <% end %>
 
-
-
 <div>
-  <h3 id="statement" data-prediction-id="<%= @prediction.id %>">
-    <strong><em><%= @prediction.statement %></em></strong>
-  </h3>
+
+  <% if @judgment && @judgment.status == "verified" %>
+    <h3 id="statement" data-prediction-id="<%= @prediction.id %>" class="text-success">
+  <% elsif @judgment && @judgment.status == "falsified" %>
+    <h3 id="statement" data-prediction-id="<%= @prediction.id %>" class="text-danger">
+  <% else %>
+    <h3 id="statement" data-prediction-id="<%= @prediction.id %>" class="text-info">
+  <% end %>
+      <strong><em><%= @prediction.statement %></em></strong>
+    </h3>
   <h5><em>Created at: <%= @prediction.created_at %></em></h5>
   <h5>
   <% if @prediction.deadline < Time.now %>
