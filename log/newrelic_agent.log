@@ -78,3 +78,21 @@
 [12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 4 Controller instrumentation
 [12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 4 view instrumentation
 [12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Finished instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Starting the New Relic agent in "development" environment.
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/01/14 11:25:50 -0800 Hobbes (8669)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/01/14 11:25:50 -0800 Hobbes (8669)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Environment: development
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : No known dispatcher detected.
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Application: development
+[12/01/14 11:25:50 -0800 Hobbes (8669)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing Rails 3+ middleware instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing ActiveRecord 4 instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing deferred Rack instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing Rack::Builder middleware instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing Net instrumentation
+[12/01/14 11:25:50 -0800 Hobbes (8669)] INFO : Installing Rails 4 Error instrumentation
+[12/01/14 11:25:51 -0800 Hobbes (8669)] INFO : Installing Rails 4 Controller instrumentation
+[12/01/14 11:25:51 -0800 Hobbes (8669)] INFO : Installing Rails 4 view instrumentation
+[12/01/14 11:25:51 -0800 Hobbes (8669)] INFO : Finished instrumentation
+[12/01/14 12:01:02 -0800 Hobbes (5283)] INFO : Starting Agent shutdown

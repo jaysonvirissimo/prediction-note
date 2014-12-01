@@ -1,18 +1,22 @@
 class JudgmentsController < ApplicationController
   def create
-    # change to judgment variables
-    @judgment = current_user.judgments.new(wager_params)
+    @judgment = current_user.judgments.new
+    @judgment.prediction_id = params[:prediction_id]
+    @judgment.status = params[:status]
     @judgment.user_id = current_user.id
 
     if @judgment.save
-      # trigger success callback
-    else
-      # render errors to json
-      flash[:errors] = @judgment.errors.full_messages
-    end
-  end
+      if @judgment.status == 'undetermined'
+        @judgment.prediction.judged = false
+      else
+        @judgment.prediction.judged = true
+      end
 
-  def judgment_params
-    params.require(:judgment).permit(:status, :prediction_id)
+      @judgment.prediction.save
+
+      render json: @judgment
+    else
+      render json: @judgment.errors.full_messages, status: :unprocessable_entity
+    end
   end
 end

@@ -100,20 +100,67 @@
 
 <script>
 $(document).ready(function () {
-  $('.btn-success').on('click', function () {
-    $('#statement').removeClass('text-info');
-    $('#statement').removeClass('text-danger');
-    $('#statement').addClass('text-success');
+  $(".btn-success").on("click", function() {
+    $.ajax({
+      type: "POST",
+      url: '/judgments.json',
+      data: {
+        "prediction_id": $('#statement').data('prediction-id'),
+        "status": "verified"},
+      success: function () {
+        $('#statement').removeClass('text-info');
+        $('#statement').removeClass('text-danger');
+        $('#statement').addClass('text-success');
+        var count = Number($('.badge').html()) - 1;
+        $('.badge').html(count);
+      },
+      error: function () {
+        alert("The judgment failed!")
+      },
+      dataType: 'JSON'
+    });
   });
-  $('.btn-info').on('click', function () {
-    $('#statement').addClass('text-info');
-    $('#statement').removeClass('text-danger');
-    $('#statement').removeClass('text-success');
-  });
-  $('.btn-danger').on('click', function () {
-    $('#statement').removeClass('text-info');
-    $('#statement').addClass('text-danger');
-    $('#statement').removeClass('text-success');
-  });
+
+  $(".btn-info").on("click", function() {
+    $.ajax({
+      type: "POST",
+      url: '/judgments.json',
+      data: {
+        "prediction_id": $('#statement').data('prediction-id'),
+        "status": "undetermined"},
+        success: function () {
+          $('#statement').addClass('text-info');
+          $('#statement').removeClass('text-danger');
+          $('#statement').removeClass('text-success');
+          var count = Number($('.badge').html()) + 1;
+          $('.badge').html(count);
+        },
+        error: function () {
+          alert("The judgment failed!")
+        },
+        dataType: 'JSON'
+      });
+    });
+
+    $(".btn-danger").on("click", function() {
+      $.ajax({
+        type: "POST",
+        url: '/judgments.json',
+        data: {
+          "prediction_id": $('#statement').data('prediction-id'),
+          "status": "falsified"},
+          success: function () {
+            $('#statement').removeClass('text-info');
+            $('#statement').addClass('text-danger');
+            $('#statement').removeClass('text-success');
+            var count = Number($('.badge').html()) - 1;
+            $('.badge').html(count);
+          },
+          error: function () {
+            alert("The judgment failed!")
+          },
+          dataType: 'JSON'
+        });
+      });
 });
 </script>
