@@ -43,8 +43,14 @@
   <ul>
     <% @user.judgments.each do |judgment| %>
       <li>
+        <% if judgment.status == "verified" %>
+        <span class="text-success">✔</span>
+        <% elsif judgment.status == "falsified" %>
+        <span class="text-danger">❌</span>
+        <% else %>
+        <span class="text-info">⚫</span>
+        <% end %>
         <%= link_to(judgment.prediction.statement, predictions_url(judgment.prediction)) %>
-        was <% judgment.status %>.
       </li>
     <% end %>
   </ul>
