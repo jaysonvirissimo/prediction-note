@@ -15,7 +15,18 @@
     <% count += 1 %>
       <tr>
         <td><%= count %></td>
-        <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+        <td>
+          <% judgment = prediction.judgments.last %>
+          <% if judgment && judgment.status == "verified" %>
+            <span class="text-success">✔</span>
+          <% elsif judgment && judgment.status == "falsified" %>
+            <span class="text-danger">❌</span>
+          <% else %>
+            <span class="text-info">⚫</span>
+          <% end %>
+          <%= link_to(prediction.statement, prediction_url(prediction)) %>
+
+        </td>
 
         <% if prediction.wagers.empty? %>
           <td>N/A</td>
