@@ -8,6 +8,7 @@
 #  deadline   :datetime         not null
 #  created_at :datetime
 #  updated_at :datetime
+#  judged     :boolean          default(FALSE)
 #
 
 require 'test_helper'

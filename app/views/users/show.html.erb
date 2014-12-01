@@ -22,7 +22,7 @@
 
 <h3>Most Recent Wagers</h3>
 
-<% if @user.wagers.length < 1 %>
+<% if @user.wagers.empty? %>
 <%= @user.username %> hasn't made any wagers yet...
 <% else %>
 <ul>
@@ -37,15 +37,15 @@
 
 <h3>Most Recent Judgments</h3>
 
-<% if @user.judgments.length < 1 %>
-<%= @user.username %> hasn't made any judgments yet...
+<% if @user.judgments.empty? %>
+  <%= @user.username %> hasn't made any judgments yet...
 <% else %>
-<ul>
-  <% @user.judgments.each do |judgment| %>
-  <li>
-    <%= link_to(judgment.prediction.statement, predictions_url(judgment.prediction)) %>
-    <%= wager.probability %> was <% judgment.status %>.
-  </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @user.judgments.each do |judgment| %>
+      <li>
+        <%= link_to(judgment.prediction.statement, predictions_url(judgment.prediction)) %>
+        <%= wager.probability %> was <% judgment.status %>.
+      </li>
+    <% end %>
+  </ul>
 <% end %>

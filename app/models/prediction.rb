@@ -8,6 +8,7 @@
 #  deadline   :datetime         not null
 #  created_at :datetime
 #  updated_at :datetime
+#  judged     :boolean          default(FALSE)
 #
 
 class Prediction < ActiveRecord::Base
@@ -23,10 +24,10 @@ class Prediction < ActiveRecord::Base
   def average_wager
     sum = 0
 
-    self.wagers.each do |wager|
+    wagers.each do |wager|
       sum += wager.probability
     end
 
-    (sum.to_f / self.wagers.length).round
+    (sum.to_f / wagers.length).round
   end
 end
