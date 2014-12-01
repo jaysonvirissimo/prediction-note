@@ -10,15 +10,13 @@
   <tbody>
     <% count = 0 %>
 
-    <% @predictions.each do |prediction| %>
-      <% if prediction.deadline < Time.now %>
-        <% count += 1 %>
-        <tr>
-          <td><%= count %></td>
-          <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
-          <td><%= distance_of_time_in_words(prediction.deadline, Time.now) %> ago</td>
-        </tr>
-      <% end %>
+    <% @due_for_judgment.each do |prediction| %>
+      <% count += 1 %>
+      <tr>
+        <td><%= count %></td>
+        <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+        <td><%= distance_of_time_in_words(prediction.deadline, Time.now) %> ago</td>
+      </tr>
     <% end %>
   </tbody>
 </table>

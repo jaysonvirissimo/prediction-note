@@ -23,7 +23,7 @@
         <li><%= link_to("New Prediction", new_prediction_url) %></li>
         <li>
           <a href="<%= undetermined_url %>">Awaiting Judgment
-          <span class="badge"><%= Prediction.unjudged_count %></span></a>
+          <span class="badge"><%= Prediction.due_for_judgment_count %></span></a>
         </li>
         <li><a href="#">Tutorial</a></li>
       </ul>

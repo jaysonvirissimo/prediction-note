@@ -21,9 +21,12 @@ class Prediction < ActiveRecord::Base
     Chronic.parse(string)
   end
 
-  def self.unjudged_count
-    # come up with more performant solution for this
-    Prediction.where('judged = ? AND deadline < ?', false, Time.now).count
+  def self.due_for_judgment_count
+    Prediction.due_for_judgment.count
+  end
+
+  def self.due_for_judgment
+    Prediction.where('judged = ? AND deadline < ?', false, Time.now)
   end
 
   def average_wager
