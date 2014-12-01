@@ -35,16 +35,22 @@ $(document).ready(function () {
   <h6>Predictor: <%= link_to(@prediction.user.username, @prediction.user) %></h6>
 </div>
 
-<br>
+<% unless @prediction.wagers.empty? %>
+  <br>
+  <% average = @prediction.average_wager %>
 
-<% if @prediction.wagers.length > 0 %>
+  <h4>Average Probability</h4>
+  <div class="progress progress-striped active">
+    <div class="progress-bar" style="width: <%= average %>%"><%= average %>%</div>
+  </div>
+
   <div>
     <h4>Wagers</h4>
     <ul>
     <% @prediction.wagers.each do |wager| %>
       <li>
         <%= wager.probability %>% <%= link_to(wager.user.username, wager.user) %>
-        on <%= Time.now %>
+        on <%= wager.created_at %>
       </li>
     <% end %>
     </ul>

@@ -4,6 +4,7 @@
     <tr>
       <th>#</th>
       <th>Statement</th>
+      <th>Average Probability</th>
       <th>Deadline</th>
     </tr>
   </thead>
@@ -15,6 +16,13 @@
       <tr>
         <td><%= count %></td>
         <td><%= link_to(prediction.statement, prediction_url(prediction)) %></td>
+
+        <% if prediction.wagers.empty? %>
+          <td>N/A</td>
+        <% else %>
+          <td><%= prediction.average_wager %>%</td>
+        <% end %>
+
         <td><%= prediction.deadline %></td>
       </tr>
     <% end %>

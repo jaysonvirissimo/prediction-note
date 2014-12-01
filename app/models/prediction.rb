@@ -19,4 +19,14 @@ class Prediction < ActiveRecord::Base
   def self.parse_datetime(string)
     Chronic.parse(string)
   end
+
+  def average_wager
+    sum = 0
+
+    self.wagers.each do |wager|
+      sum += wager.probability
+    end
+
+    (sum.to_f / self.wagers.length).round
+  end
 end
