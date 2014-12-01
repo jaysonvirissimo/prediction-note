@@ -36606,3 +36606,319 @@ Processing by PredictionsController#index as HTML
   [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
 Completed 200 OK in 549ms (Views: 418.8ms | ActiveRecord: 128.7ms)
+
+
+Started GET "/undetermined" for 127.0.0.1 at 2014-11-30 21:28:37 -0800
+Processing by PredictionsController#undetermined as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "predictions"[0m
+  [1m[35mPrediction Load (0.5ms)[0m  SELECT "predictions".* FROM "predictions"  WHERE (judged = 'f')
+  Rendered predictions/undetermined.html.erb within layouts/application (10.1ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 160ms (Views: 130.5ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-30 21:29:50 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-30 21:29:50 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-30 21:29:52 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (0.7ms)[0m  SELECT "predictions".* FROM "predictions"
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 39]]
+  [1m[35mWager Load (0.7ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 39]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 40]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 40]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 41]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 41]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 42]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 42]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 43]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 43]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 44]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 44]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 45]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 45]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 46]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 46]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 47]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 47]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 48]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 48]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 49]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 49]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 50]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 50]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 51]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 51]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 52]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 52]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 53]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 53]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 54]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 54]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 55]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 55]]
+  [1m[36mWager Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 56]]
+  [1m[35mWager Load (0.8ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 56]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 57]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 57]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 58]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 58]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 59]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 59]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 60]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 60]]
+  [1m[36mWager Exists (2.8ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 61]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 61]]
+  [1m[36mWager Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 62]]
+  [1m[35mWager Load (0.7ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 62]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 63]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 63]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 64]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 64]]
+  [1m[36mWager Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 65]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 65]]
+  [1m[36mWager Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 66]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 66]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 67]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 67]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 68]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 68]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 69]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 69]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 70]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 70]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 71]]
+  [1m[35mWager Exists (0.2ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 72]]
+  [1m[36mWager Load (0.3ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 72]]
+  [1m[35mWager Exists (0.6ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 73]]
+  [1m[36mWager Load (0.3ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 73]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 74]]
+  [1m[36mWager Load (0.2ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 74]]
+  [1m[35mWager Exists (0.2ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 75]]
+  [1m[36mWager Load (0.2ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 75]]
+  [1m[35mWager Exists (0.2ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 76]]
+  [1m[36mWager Load (0.2ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 76]]
+  [1m[35mWager Exists (1.8ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 77]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 78]]
+  [1m[35mWager Load (0.6ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 78]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 79]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 79]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 80]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 80]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 81]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 81]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 82]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 82]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 83]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 83]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 84]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 84]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 85]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 85]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 86]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 86]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 87]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 87]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 88]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 88]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 89]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 89]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 90]]
+  Rendered predictions/index.html.erb within layouts/application (237.0ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 355ms (Views: 311.8ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/predictions/39" for 127.0.0.1 at 2014-11-30 21:29:54 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mPrediction Load (0.4ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 39]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mWager Exists (0.4ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 39]]
+  [1m[36mWager Load (0.4ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 39]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 44]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 44]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 45]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 42]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered predictions/show.html.erb within layouts/application (42.6ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 210ms (Views: 202.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/predictions/new" for 127.0.0.1 at 2014-11-30 21:30:34 -0800
+Processing by PredictionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_signed_in! rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-30 21:30:34 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 227ms (Views: 223.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/predictions" for 127.0.0.1 at 2014-11-30 21:30:37 -0800
+Processing by PredictionsController#index as HTML
+  [1m[35mPrediction Load (1.9ms)[0m  SELECT "predictions".* FROM "predictions"
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 39]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 39]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 40]]
+  [1m[35mWager Load (0.6ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 40]]
+  [1m[36mWager Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 41]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 41]]
+  [1m[36mWager Exists (2.9ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 42]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 42]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 43]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 43]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 44]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 44]]
+  [1m[36mWager Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 45]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 45]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 46]]
+  [1m[35mWager Load (0.6ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 46]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 47]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 47]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 48]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 48]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 49]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 49]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 50]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 50]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 51]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 51]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 52]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 52]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 53]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 53]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 54]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 54]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 55]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 55]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 56]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 56]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 57]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 57]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 58]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 58]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 59]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 59]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 60]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 60]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 61]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 61]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 62]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 62]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 63]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 63]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 64]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 64]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 65]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 65]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 66]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 66]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 67]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 67]]
+  [1m[36mWager Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 68]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 68]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 69]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 69]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 70]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 70]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 71]]
+  [1m[35mWager Exists (0.5ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 72]]
+  [1m[36mWager Load (0.8ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 72]]
+  [1m[35mWager Exists (0.7ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 73]]
+  [1m[36mWager Load (0.5ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 73]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 74]]
+  [1m[36mWager Load (0.3ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 74]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 75]]
+  [1m[36mWager Load (0.3ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 75]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 76]]
+  [1m[36mWager Load (0.2ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 76]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 77]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 78]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 78]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 79]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 79]]
+  [1m[36mWager Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 80]]
+  [1m[35mWager Load (0.7ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 80]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 81]]
+  [1m[35mWager Load (0.4ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 81]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 82]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 82]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 83]]
+  [1m[35mWager Load (0.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 83]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 84]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 84]]
+  [1m[36mWager Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 85]]
+  [1m[35mWager Load (0.3ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 85]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 86]]
+  [1m[35mWager Load (1.2ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 86]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 87]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 87]]
+  [1m[36mWager Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 88]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 88]]
+  [1m[36mWager Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 89]]
+  [1m[35mWager Load (0.5ms)[0m  SELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1  [["prediction_id", 89]]
+  [1m[36mWager Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1[0m  [["prediction_id", 90]]
+  Rendered predictions/index.html.erb within layouts/application (256.3ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 439ms (Views: 393.3ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/predictions/66" for 127.0.0.1 at 2014-11-30 21:30:45 -0800
+Processing by PredictionsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[35mPrediction Load (0.6ms)[0m  SELECT  "predictions".* FROM "predictions"  WHERE "predictions"."id" = $1 LIMIT 1  [["id", 66]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 48]]
+  [1m[35mWager Exists (0.3ms)[0m  SELECT  1 AS one FROM "wagers"  WHERE "wagers"."prediction_id" = $1 LIMIT 1  [["prediction_id", 66]]
+  [1m[36mWager Load (0.6ms)[0m  [1mSELECT "wagers".* FROM "wagers"  WHERE "wagers"."prediction_id" = $1[0m  [["prediction_id", 66]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 47]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 41]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered predictions/show.html.erb within layouts/application (19.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 165ms (Views: 156.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2014-11-30 21:31:50 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 214ms (Views: 212.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-11-30 21:31:52 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "predictions"  WHERE (judged = 'f')[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.8ms)
