@@ -8,7 +8,6 @@ class PredictionsController < ApplicationController
 
   def undetermined
     @due_for_judgment = Prediction.due_for_judgment.sort_by(&:deadline)
-    # @predictions = Prediction.where('judged = ?', false).sort_by(&:deadline)
 
     render :undetermined
   end

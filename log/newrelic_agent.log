@@ -61,3 +61,20 @@
 [12/01/14 09:39:48 -0800 Hobbes (5283)] INFO : Doing deferred dependency-detection before Rack startup
 [12/01/14 09:39:55 -0800 Hobbes (5283)] ERROR : Unknown license key
 [12/01/14 09:39:55 -0800 Hobbes (5283)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Starting the New Relic agent in "development" environment.
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/01/14 10:04:46 -0800 Hobbes (6348)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/01/14 10:04:46 -0800 Hobbes (6348)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Environment: development
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : No known dispatcher detected.
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Application: development
+[12/01/14 10:04:46 -0800 Hobbes (6348)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 3+ middleware instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing ActiveRecord 4 instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing deferred Rack instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rack::Builder middleware instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Net instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 4 Error instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 4 Controller instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Installing Rails 4 view instrumentation
+[12/01/14 10:04:46 -0800 Hobbes (6348)] INFO : Finished instrumentation
