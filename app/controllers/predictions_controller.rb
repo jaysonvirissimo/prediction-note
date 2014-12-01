@@ -2,7 +2,7 @@ class PredictionsController < ApplicationController
   before_action :require_signed_in!, only: [:new, :create]
 
   def index
-    @predictions = Prediction.all
+    @predictions = Prediction.last(50).reverse
     render :index
   end
 
