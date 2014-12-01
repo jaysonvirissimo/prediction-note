@@ -8,25 +8,23 @@
 
 <h3>Most Recent Predictions</h3>
 
-<% if @user.predictions.length < 1 %>
+<% if @predictions.empty? %>
 <%= @user.username %> hasn't made any predictions yet...
 <% else %>
 <ul>
-  <% @user.predictions.each do |prediction| %>
+  <% @predictions.each do |prediction| %>
   <li><%= link_to(prediction.statement, prediction) %></li>
   <% end %>
 </ul>
 <% end %>
 
-<br>
-
 <h3>Most Recent Wagers</h3>
 
-<% if @user.wagers.empty? %>
+<% if @wagers.empty? %>
 <%= @user.username %> hasn't made any wagers yet...
 <% else %>
 <ul>
-  <% @user.wagers.each do |wager| %>
+  <% @wagers.each do |wager| %>
   <li>
     <%= link_to(wager.prediction.statement, wager.prediction) %>
     <%= wager.probability %>%
@@ -37,11 +35,11 @@
 
 <h3>Most Recent Judgments</h3>
 
-<% if @user.judgments.empty? %>
+<% if @judgments.empty? %>
   <%= @user.username %> hasn't made any judgments yet...
 <% else %>
   <ul>
-    <% @user.judgments.each do |judgment| %>
+    <% @judgments.each do |judgment| %>
       <li>
         <% if judgment.status == "verified" %>
         <span class="text-success">✔</span>

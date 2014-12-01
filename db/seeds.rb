@@ -37,7 +37,7 @@ def create_judgments(number)
     Judgment.create!(
       user_id: user.id,
       prediction_id: prediction.id,
-      status: ["verified", "falsified"].sample
+      status: %w(verified falsified).sample
     )
     prediction.judged = true
     prediction.save

@@ -17,7 +17,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    
+    @predictions = @user.predictions.limit(5)
+    @wagers = @user.wagers.limit(5)
+    @judgments = @user.judgments.limit(5)
+
     render :show
   end
 
