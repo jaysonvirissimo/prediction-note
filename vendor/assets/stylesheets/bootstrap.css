@@ -6853,23 +6853,20 @@ a.list-group-item-danger.active:focus {
   margin: 0;
 }
 
-.item blockquote img {
-  margin-bottom: 10px;
-}
-
-.item blockquote p:before {
+/*.item blockquote p:before {
   content: "\f10d";
   font-family: 'Fontawesome';
   float: left;
   margin-right: 10px;
-}
+}*/
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   #quote-carousel
   {
+    /*margin: 0;*/
     margin-bottom: 0;
-    padding: 0 40px 30px 40px;
+    /*padding: 0 40px 30px 40px;*/
   }
 
 }

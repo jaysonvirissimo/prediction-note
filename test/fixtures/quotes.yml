@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: quotes
+#
+#  id         :integer          not null, primary key
+#  author     :string(255)      not null
+#  quote      :string(255)      not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: MyString
+  quote: MyString
+
+two:
+  author: MyString
+  quote: MyString
