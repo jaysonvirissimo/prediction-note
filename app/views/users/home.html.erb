@@ -1,17 +1,71 @@
-<div class="jumbotron">
-  <blockquote>
-    <p>
-      Prediction is not just one of the things your brain does.
-      It is the primary function of the neo-cortex, and the foundation of intelligence.
-    </p>
-    <small>Jeff Hawkins</small>
-  </blockquote>
+<div class="jumbotron" id="welcome-jumbotron">
+  <h2>Welcome to <strong>PredictionNote</strong></h2>
 
-  <p>Welcome to <strong>PredictionNote</strong>!</p>
+  <p>Find out just how sure you should be, and get better at being only as sure as the facts justify.</p>
 
-  <p>
-     A place to make predictions, help judge the
-    predictions of others, and become only as sure of things as the facts justify.
-  </p>
-  <p><a href="#" class="btn btn-primary btn-lg">Tutorial</a></p>
+  <div>
+    <p><a class="btn btn-primary btn-lg">Get Started</a></p>
+  </div>
 </div>
+
+<div class='row jumbotron' style="margin:0" id="quotes-jumbotron">
+  <div class='col-lg-offset-2 col-lg-8'>
+    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+      <!-- Bottom Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#quote-carousel" data-slide-to="1"></li>
+        <li data-target="#quote-carousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Carousel Slides / Quotes -->
+      <div class="carousel-inner">
+
+        <!-- Quote 1 -->
+        <div class="item active">
+          <blockquote>
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-9">
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <!-- Quote 2 -->
+        <div class="item">
+          <blockquote>
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-9">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+        <!-- Quote 3 -->
+        <div class="item">
+          <blockquote>
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-9">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.
+                <small>Someone famous</small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<script>
+$(document).ready(function() {
+  $('#quote-carousel').carousel({
+    pause: true,
+    interval: 5000,
+  });
+});
+</script>

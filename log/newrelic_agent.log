@@ -314,3 +314,115 @@
 [12/02/14 09:12:56 -0800 Hobbes (3658)] INFO : Doing deferred dependency-detection before Rack startup
 [12/02/14 09:12:59 -0800 Hobbes (3658)] ERROR : Unknown license key
 [12/02/14 09:12:59 -0800 Hobbes (3658)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 10:52:01 -0800 Hobbes (3658)] INFO : Starting Agent shutdown
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Starting the New Relic agent in "development" environment.
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/02/14 10:52:19 -0800 Hobbes (6986)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/02/14 10:52:19 -0800 Hobbes (6986)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Environment: development
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Dispatcher: webrick
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Application: development
+[12/02/14 10:52:19 -0800 Hobbes (6986)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Rails 3+ middleware instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing ActiveRecord 4 instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing deferred Rack instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Rack::Builder middleware instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Net instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Rails 4 Error instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Rails 4 Controller instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Installing Rails 4 view instrumentation
+[12/02/14 10:52:19 -0800 Hobbes (6986)] INFO : Finished instrumentation
+[12/02/14 10:52:20 -0800 Hobbes (6986)] INFO : Doing deferred dependency-detection before Rack startup
+[12/02/14 10:52:25 -0800 Hobbes (6986)] ERROR : Unknown license key
+[12/02/14 10:52:25 -0800 Hobbes (6986)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 11:11:41 -0800 Hobbes (6986)] INFO : Starting Agent shutdown
+[12/02/14 11:11:46 -0800 Hobbes (7683)] INFO : Starting the New Relic agent in "development" environment.
+[12/02/14 11:11:46 -0800 Hobbes (7683)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/02/14 11:11:46 -0800 Hobbes (7683)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/02/14 11:11:46 -0800 Hobbes (7683)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/02/14 11:11:46 -0800 Hobbes (7683)] INFO : Environment: development
+[12/02/14 11:11:46 -0800 Hobbes (7683)] INFO : Dispatcher: webrick
+[12/02/14 11:11:46 -0800 Hobbes (7683)] INFO : Application: development
+[12/02/14 11:11:46 -0800 Hobbes (7683)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Rails 3+ middleware instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing ActiveRecord 4 instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing deferred Rack instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Rack::Builder middleware instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Net instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Rails 4 Error instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Rails 4 Controller instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Installing Rails 4 view instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Finished instrumentation
+[12/02/14 11:11:47 -0800 Hobbes (7683)] INFO : Doing deferred dependency-detection before Rack startup
+[12/02/14 11:11:52 -0800 Hobbes (7683)] ERROR : Unknown license key
+[12/02/14 11:11:52 -0800 Hobbes (7683)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 11:12:42 -0800 Hobbes (7683)] INFO : Starting Agent shutdown
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Starting the New Relic agent in "development" environment.
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/02/14 11:12:56 -0800 Hobbes (7721)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/02/14 11:12:56 -0800 Hobbes (7721)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Environment: development
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Dispatcher: webrick
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Application: development
+[12/02/14 11:12:56 -0800 Hobbes (7721)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Rails 3+ middleware instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing ActiveRecord 4 instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing deferred Rack instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Rack::Builder middleware instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Net instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Rails 4 Error instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Rails 4 Controller instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Installing Rails 4 view instrumentation
+[12/02/14 11:12:56 -0800 Hobbes (7721)] INFO : Finished instrumentation
+[12/02/14 11:12:57 -0800 Hobbes (7721)] INFO : Doing deferred dependency-detection before Rack startup
+[12/02/14 11:15:18 -0800 Hobbes (7721)] ERROR : Unknown license key
+[12/02/14 11:15:18 -0800 Hobbes (7721)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 11:49:12 -0800 Hobbes (7721)] INFO : Starting Agent shutdown
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Starting the New Relic agent in "development" environment.
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/02/14 11:49:18 -0800 Hobbes (8679)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/02/14 11:49:18 -0800 Hobbes (8679)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Environment: development
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Dispatcher: webrick
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Application: development
+[12/02/14 11:49:18 -0800 Hobbes (8679)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Rails 3+ middleware instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing ActiveRecord 4 instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing deferred Rack instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Rack::Builder middleware instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Net instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Rails 4 Error instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Rails 4 Controller instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Installing Rails 4 view instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Finished instrumentation
+[12/02/14 11:49:18 -0800 Hobbes (8679)] INFO : Doing deferred dependency-detection before Rack startup
+[12/02/14 11:50:43 -0800 Hobbes (8679)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[12/02/14 11:50:43 -0800 Hobbes (8679)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector.newrelic.com:443: getaddrinfo: Name or service not known
+[12/02/14 11:50:43 -0800 Hobbes (8679)] INFO : Will re-attempt in 60 seconds
+[12/02/14 11:51:55 -0800 Hobbes (8679)] ERROR : Unknown license key
+[12/02/14 11:51:55 -0800 Hobbes (8679)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 11:55:57 -0800 Hobbes (8679)] INFO : Starting Agent shutdown
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Starting the New Relic agent in "development" environment.
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/02/14 11:56:02 -0800 Hobbes (8810)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/02/14 11:56:02 -0800 Hobbes (8810)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Environment: development
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Dispatcher: webrick
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Application: development
+[12/02/14 11:56:02 -0800 Hobbes (8810)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Rails 3+ middleware instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing ActiveRecord 4 instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing deferred Rack instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Rack::Builder middleware instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Net instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Rails 4 Error instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Rails 4 Controller instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Installing Rails 4 view instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Finished instrumentation
+[12/02/14 11:56:02 -0800 Hobbes (8810)] INFO : Doing deferred dependency-detection before Rack startup
+[12/02/14 11:56:25 -0800 Hobbes (8810)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[12/02/14 11:56:25 -0800 Hobbes (8810)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector.newrelic.com:443: getaddrinfo: Name or service not known
+[12/02/14 11:56:25 -0800 Hobbes (8810)] INFO : Will re-attempt in 60 seconds
+[12/02/14 11:58:19 -0800 Hobbes (8810)] ERROR : Unknown license key
+[12/02/14 11:58:19 -0800 Hobbes (8810)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/02/14 12:00:58 -0800 Hobbes (8810)] INFO : Starting Agent shutdown
