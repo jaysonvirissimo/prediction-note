@@ -1,28 +1,5 @@
 #Checklist
 
-***Specific Goals***
-- [ ] Rails API.
-  - [ ] User model
-  - [x] User table
-  - [ ] User controller
-  - [ ] Prediction model
-  - [x] Prediction table
-  - [ ] Prediction controller
-  - [ ] Wager model
-  - [x] Wager table
-  - [ ] Wager controller
-  - [ ] Session controller
-- [ ] Bootstrap styling
-  - [ ] Navigation Bar
-- [ ] Backbone Frontend
-  - [ ] User model
-  - [ ] Prediction model
-  - [ ] Wager model
-- [ ] Chart.js
-  - [ ] User calibration graph
-  - [ ] Users calibration graph
-
-***General Goals***
 - [x] Use your own custom domain (no herokuapps.com subdomain)
 - [ ] Have a guest account (or two, if you need both to demo)
 - [ ] Have well groomed seed data (real world stuff, no lorem ipsum)
@@ -46,11 +23,11 @@ and is crucial for any serious web app.
     probably need polymorphic associations.
 - [ ] Style :hover actions of input, buttons and links, to show you can
     click on things. More visual feedback!
-- [ ] Don't have any unstyled pages, no matter how insignificant.
+- [x] Don't have any unstyled pages, no matter how insignificant.
 - [ ] It is more important to have a consistent design applied everywhere,
     however minimal, than something fancy here and there, and others
     painfully untouched.
-- [ ] Style your input, textarea and button tags (use the same size font,
+- [x] Style your input, textarea and button tags (use the same size font,
       color, etc. as the rest of your app, else they stick out like a sore
       thumb)
 - [ ] Make your overall text size big
