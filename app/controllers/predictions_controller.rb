@@ -28,7 +28,7 @@ class PredictionsController < ApplicationController
     if @prediction.save
       redirect_to prediction_url(@prediction)
     else
-      flash[:errors] = @prediction.errors.full_messages
+      flash.now[:errors] = @prediction.errors.full_messages
       render :new
     end
   end
