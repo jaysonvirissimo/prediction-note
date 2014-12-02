@@ -11,4 +11,5 @@
 
 class Quote < ActiveRecord::Base
   validates :author, :quote, presence: true
+  validates :quote, uniqueness: true
 end

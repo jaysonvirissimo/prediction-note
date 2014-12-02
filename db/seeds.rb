@@ -96,6 +96,10 @@ def create_quotes
   )
 end
 
+def create_guest_user
+  User.create!(username: "Guest", password: "password")
+end
+
 create_users(16)
 create_predictions(64)
 create_wagers(256)
