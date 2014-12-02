@@ -4,7 +4,7 @@
 - [ ] Have a guest account (or two, if you need both to demo)
 - [ ] Have well groomed seed data (real world stuff, no lorem ipsum)
 - [ ] Have buttons to fill out complex forms while demoing (with nice seed data)
-- [ ] Have a root homepage
+- [x] Have a root homepage
 - [ ] Have a one to three sentences statement on your homepage describing
 your app ("A Tumblr clone", "A Rap Genius clone to annotate dolphin
 sounds" etc. Make it painfully obvious what your app does at first

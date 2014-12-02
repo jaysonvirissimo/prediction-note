@@ -13,6 +13,7 @@
 
 class Prediction < ActiveRecord::Base
   validates :statement, :deadline, presence: true
+  validates :statement, length: { in: (1..140) }
   belongs_to(:user)
   has_many(:wagers)
   has_many(:judgments)
