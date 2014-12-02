@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def home
-    @quotes = Quote.order("RANDOM()").first(3)
+    @quotes = Quote.order('RANDOM()').first(3)
     render :home
   end
 
