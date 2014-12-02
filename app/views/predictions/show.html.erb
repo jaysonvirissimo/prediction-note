@@ -90,7 +90,7 @@
   </div>
 <% end %>
 
-<% if signed_in? %>
+<% if signed_in? && current_user.id != @prediction.user_id %>
   <div class="form-group">
     <h4>Make a Judgment</h4>
     <div class="well">
