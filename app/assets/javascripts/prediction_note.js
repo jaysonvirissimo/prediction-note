@@ -9,3 +9,9 @@ window.PredictionNote = {
     // Backbone.history.start();
   }
 };
+
+$(document).ready(function () {
+  $('#tutorial-button').on('click', function () {
+    alert("it's working!");
+  })
+});

@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   root to: 'users#home'
   get '/undetermined' => 'predictions#undetermined'
-  get '/tutorial' => 'predictions#tutorial'
   post '/judgments' => 'judgments#create'
 
   resource :session, only: [:create, :destroy, :new]

@@ -17,4 +17,5 @@
 //= require prediction_note
 //= require turbolinks
 //= require bootstrap.min
+//= require shepherd.min
 //= require_tree .
