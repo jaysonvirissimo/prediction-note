@@ -11,6 +11,10 @@ class PredictionsController < ApplicationController
     render :undetermined
   end
 
+  def tutorial
+    render :tutorial
+  end
+
   def new
     render :new
   end
