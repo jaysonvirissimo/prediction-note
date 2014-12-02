@@ -40,9 +40,19 @@
   <% average = @prediction.average_wager %>
 
   <h4>Average Probability</h4>
-  <div class="progress progress-striped active">
-    <div class="progress-bar" style="width: <%= average %>%"><%= average %>%</div>
-  </div>
+  <% if average < 33 %>
+    <div class="progress">
+      <div class="progress-bar progress-bar-danger" style="width: <%= average %>%"><%= average %>%</div>
+    </div>
+  <% elsif average > 66 %>
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" style="width: <%= average %>%"><%= average %>%</div>
+    </div>
+  <% else %>
+    <div class="progress">
+      <div class="progress-bar progress-bar-info" style="width: <%= average %>%"><%= average %>%</div>
+    </div>
+  <% end %>
 
   <div>
     <h4>Wagers</h4>
