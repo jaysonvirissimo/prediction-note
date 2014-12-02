@@ -15,6 +15,7 @@
     <% count += 1 %>
       <tr>
         <td><%= count %></td>
+        
         <td>
           <% judgment = prediction.judgments.last %>
           <% if judgment && judgment.status == "verified" %>
@@ -34,7 +35,11 @@
           <td><%= prediction.average_wager %>%</td>
         <% end %>
 
-        <td><%= prediction.deadline %></td>
+        <% if prediction.deadline < Time.now %>
+          <td><%= distance_of_time_in_words(prediction.deadline, Time.now) %> ago</td>
+        <% else %>
+          <td>in <%= distance_of_time_in_words(prediction.deadline, Time.now) %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

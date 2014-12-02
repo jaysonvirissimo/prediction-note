@@ -98,6 +98,6 @@ end
 
 create_users(16)
 create_predictions(64)
-create_wagers(128)
+create_wagers(256)
 create_judgments(64)
 create_quotes
