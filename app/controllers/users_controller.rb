@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def home
+    @quotes = Quote.order("RANDOM()").first(3)
+    render :home
+  end
+
   def show
     @user = User.find_by(id: params[:id])
     @predictions = @user.predictions.last(5)
