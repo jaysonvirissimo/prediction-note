@@ -2,11 +2,14 @@
 
 <br>
 
-<h3>Calibration Graph</h3>
+<h3 id="graph-title">Calibration Graph</h3>
+<section>
+Coming soon...
+</section>
 
 <br>
 
-<h3>Most Recent Predictions</h3>
+<h3 id="predictions-title">Most Recent Predictions</h3>
 
 <% if @predictions.empty? %>
 <%= @user.username %> hasn't made any predictions yet...
@@ -18,7 +21,7 @@
 </ul>
 <% end %>
 
-<h3>Most Recent Wagers</h3>
+<h3 id="wagers-title">Most Recent Wagers</h3>
 
 <% if @wagers.empty? %>
 <%= @user.username %> hasn't made any wagers yet...
@@ -33,7 +36,7 @@
 </ul>
 <% end %>
 
-<h3>Most Recent Judgments</h3>
+<h3 id="judgments-title">Most Recent Judgments</h3>
 
 <% if @judgments.empty? %>
   <%= @user.username %> hasn't made any judgments yet...
@@ -53,3 +56,113 @@
     <% end %>
   </ul>
 <% end %>
+
+<script>
+var localTour;
+
+localTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+localTour.addStep('overview-step', {
+  title: "<strong>Statistics Tutorial</strong>",
+  text: "The statistics page contains the most comprehensive collection of data about a particular <strong>PredictionNote</strong> user. " +
+  "You can always reach your own statistics page by clicking your username in the upper right corner of the screen and then choosing <strong>Statistics</strong>.",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Exit',
+    action: localTour.cancel
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('graph-step', {
+  title: "<strong>Statistics Tutorial</strong>",
+  text: "<p>This graph represents the user's calibration.</p>" +
+  "<p>Calibration is roughly the accuracy of probabilistic predictions. " +
+  "The closer the user's line matches up with a straight line going from the bottom left corner to the upper right, the closer they approximate an ideally calibrated agent (that's a good thing).</p>",
+  attachTo: "#graph-title bottom",
+  classes: 'shepherd-theme-arrows',
+  scrollTo: false,
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('predictions-step', {
+  title: "<strong>Statistics Tutorial</strong>",
+  text: "Here are the last 5 predictions made by this user (if they made that many). " +
+  "If any are due for judgment, why not help them out and judge them?" +
+  "Click on them to find out more about them or make a judgment.",
+  attachTo: "#predictions-title bottom",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('wagers-step', {
+  title: "<strong>Statistics Tutorial</strong>",
+  text: "Here are 5 of the most recent wagers placed by this user. " +
+  "The probability is just to the right of the prediction statement. " +
+  "Do you agree with their assessment of the likelihood of these events?",
+  attachTo: "#wagers-title bottom",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('judgments-step', {
+  title: "<strong>Statistics Tutorial</strong>",
+  text: "Here are the latest judgments by this user. If you see any mistakes, you can correct them by making a judgment of your own.",
+  attachTo: "#judgments-title bottom",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+
+$(document).ready(function() {
+  $('#tutorial-button').on('click', function (event) {
+    event.preventDefault();
+    localTour.start();
+  });
+});
+</script>
