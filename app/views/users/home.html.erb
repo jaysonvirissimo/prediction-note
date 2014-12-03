@@ -72,6 +72,7 @@ getStartedTour = new Shepherd.Tour({
 });
 
 getStartedTour.addStep('welcome-step', {
+  title: "Getting Started Tutorial",
   text: "Welcome to <strong>PredictionNote</strong>! " +
   "<strong>PredictionNote</strong> is a website for making predictions, " +
   "placing wagers (don't worry, no money is involved), " +
@@ -91,6 +92,7 @@ getStartedTour.addStep('welcome-step', {
 
 <% unless signed_in? %>
 getStartedTour.addStep('sign-in-step', {
+  title: "Getting Started Tutorial",
   text: "In order to get the most of <strong>PredictionNote</strong>, you must be signed in. " +
   "If you just want to try things out, there is also a <strong>Guest User</strong> option. " +
   "Click <strong>Sign In</strong> in the upper right to navigate to the sign in page.",
@@ -105,6 +107,7 @@ getStartedTour.addStep('sign-in-step', {
 });
 
 getStartedTour.addStep('sign-up-step', {
+  title: "Getting Started Tutorial",
   text: "If you want your own account so you can track your progress, " +
   "just click the <strong>Sign Up</strong> button and enter a username and 6 or more digit password.",
   attachTo: '#sign-up-button bottom',
@@ -117,7 +120,10 @@ getStartedTour.addStep('sign-up-step', {
   ]
 });
 
+<% end %>
+
 getStartedTour.addStep('tutorial-step', {
+  title: "Getting Started Tutorial",
   text: "At any time you can click this <strong>Tutorial</strong> button to get an explanation of all the main features on the page. " +
   "In fact, click it right now for an explanation of each of the other buttons in the navigation bar.",
   attachTo: '#tutorial-button bottom',
@@ -129,8 +135,6 @@ getStartedTour.addStep('tutorial-step', {
   }
   ]
 });
-
-<% end %>
 </script>
 
 <script>
@@ -145,6 +149,7 @@ localTour = new Shepherd.Tour({
 
 <% if signed_in? %>
 localTour.addStep('dropdown-step', {
+  title: "Home Tutorial",
   text: "If you click on your username in the upper right corner, a dropdown menu will appear with " +
   "a <strong>Statistics</strong> and <strong>Settings</strong> buttons. The former shows your calibration and recent history, " +
   "and the later let's you change your account configuration.",
@@ -164,6 +169,7 @@ localTour.addStep('dropdown-step', {
 <% end %>
 
 localTour.addStep('prediction-note-step', {
+  title: "Home Tutorial",
   text: 'The <strong>PredictionNote</strong> button is a link to the home page, so if you ever want to get back here, just click it.',
   attachTo: '#home-page-button bottom',
   classes: 'shepherd-theme-arrows',
@@ -180,6 +186,7 @@ localTour.addStep('prediction-note-step', {
 });
 
 localTour.addStep('predictions-step', {
+  title: "Home Tutorial",
   text: 'The <strong>Predictions</strong> button leads to an index containing the 50 latest predictions.',
   attachTo: '#predictions-button bottom',
   classes: 'shepherd-theme-arrows',
@@ -196,6 +203,7 @@ localTour.addStep('predictions-step', {
 });
 
 localTour.addStep('new-prediction-step', {
+  title: "Home Tutorial",
   text: 'The <strong>New Prediction</strong> button is where you want to click if you want to make your very own prediction.',
   attachTo: '#new-prediction-button bottom',
   classes: 'shepherd-theme-arrows',
@@ -212,6 +220,7 @@ localTour.addStep('new-prediction-step', {
 });
 
 localTour.addStep('awaiting-judgment-step', {
+  title: "Home Tutorial",
   text: "The <strong>Awaiting Judgment</strong> button shows you only the predictions that are past their deadline " +
   " that haven't already been judged. That little number inside the button represents the total number of outstanding predictions. " +
   "Do your part and bring down this number by judging predictions!",
