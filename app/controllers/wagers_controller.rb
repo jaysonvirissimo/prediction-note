@@ -9,7 +9,7 @@ class WagersController < ApplicationController
     if @wager.save
       redirect_to prediction_url(@prediction)
     else
-      flash[:errors] = @wager.errors.full_messages
+      flash.now[:errors] = @wager.errors.full_messages
       redirect_to prediction_url(@prediction)
     end
   end
