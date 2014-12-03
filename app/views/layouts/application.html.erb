@@ -5,6 +5,90 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<script>
+  var localTour;
+
+  localTour = new Shepherd.Tour({
+    defaults: {
+      classes: 'shepherd-theme-arrows',
+      scrollTo: true
+    }
+  });
+
+  localTour.addStep('predictions-step', {
+    text: 'The <code>Predictions</code> button leads to an index containing the 50 latest predictions.',
+    attachTo: '#predictions-button bottom',
+    classes: 'shepherd-theme-arrows',
+    buttons: [
+    {
+      text: 'Next',
+      action: localTour.next
+    }
+    ]
+  });
+
+  localTour.addStep('new-prediction-step', {
+    text: 'The <code>New Prediction</code> button is where you want to click if you want to make your very own prediction.',
+    attachTo: '#new-prediction-button bottom',
+    classes: 'shepherd-theme-arrows',
+    buttons: [
+    {
+      text: 'Next',
+      action: localTour.next
+    }
+    ]
+  });
+
+  localTour.addStep('awaiting-judgment-step', {
+    text: "The <code>Awaiting Judgment</code> button shows you only the predictions that are past their deadline " +
+    " that haven't been judged yet. That little number inside the button represents the total number of outstanding predictions.",
+    attachTo: '#new-prediction-button bottom',
+    classes: 'shepherd-theme-arrows',
+    buttons: [
+    {
+      text: 'Next',
+      action: localTour.next
+    }
+    ]
+  });
+
+  localTour.addStep('awaiting-judgment-step', {
+    text: "The <code>Awaiting Judgment</code> button shows you only the predictions that are past their deadline " +
+    " that haven't been judged yet. That little number inside the button represents the total number of outstanding predictions. " +
+    "Do your part and bring down this number by judging predictions.",
+    attachTo: '#awaiting-judgment-button bottom',
+    classes: 'shepherd-theme-arrows',
+    buttons: [
+    {
+      text: 'Next',
+      action: localTour.next
+    }
+    ]
+  });
+
+  <% if signed_in? %>
+  localTour.addStep('dropdown-step', {
+    text: "If you click on your username in the upper right corner, a dropdown menu will appear with " +
+    "a <code>Statistics</code> and <code>Settings</code> buttons. The former shows your calibration and recent history, " +
+    "and the later let's you change your account configuration.",
+    attachTo: '#dropdown-button bottom',
+    classes: 'shepherd-theme-arrows',
+    buttons: [
+    {
+      text: 'End',
+      action: localTour.next
+    }
+    ]
+  });
+  <% end %>
+
+  $(document).ready(function () {
+    $('#tutorial-button').on('click', function (event) {
+      event.preventDefault();
+      localTour.start();
+    })
+  });
+</script>
 </head>
 <body>
 <header>
@@ -19,9 +103,9 @@
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to("Predictions", predictions_url) %></li>
-        <li><%= link_to("New Prediction", new_prediction_url) %></li>
-        <li>
+        <li id="predictions-button"><%= link_to("Predictions", predictions_url) %></li>
+        <li id="new-prediction-button"><%= link_to("New Prediction", new_prediction_url) %></li>
+        <li id="awaiting-judgment-button">
           <a href="<%= undetermined_url %>">Awaiting Judgment
           <span class="badge"><%= Prediction.due_for_judgment_count %></span></a>
         </li>
@@ -32,7 +116,7 @@
       </form>
       <% if signed_in? %>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li id="dropdown-button" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome,
             <%= current_user.username %><b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -69,12 +153,11 @@
 <%= yield %>
 
 <footer>
-  <div class="well">
+  <div class="well well-sm">
     <div class="row">
       <div class="col-lg-12">
         <p> <strong>PredictionNote</strong> was made by <a href="http://jaysonvirissimo.github.io/" rel="nofollow">Jayson Virissimo</a>. Contact him at <a href="mailto:jayson.virissimo@asu.edu">jayson.virissimo@asu.edu</a>.</p>
         <p>The source code is released under the <a href="https://github.com/jaysonvirissimo/prediction-note/blob/master/LICENSE">BSD License</a> and can be found on <a href="https://github.com/jaysonvirissimo/prediction-note">GitHub</a>.</p>
-        <p>Inspired by <a href="http://predictionbook.com/" rel="nofollow">PredictionBook</a>.</p>
       </div>
     </div>
   </div>
