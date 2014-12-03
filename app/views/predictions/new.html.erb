@@ -29,8 +29,100 @@
 
     <div class="form-group" style="width: 50%;">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="new-prediction-submit-button"type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
   </fieldset>
 </form>
+
+<script>
+var localTour;
+
+localTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+localTour.addStep('overview-step', {
+  title: "<strong>New Prediction</strong>",
+  text: "The new prediction page provides a form for you to make your own prediction.",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Exit',
+    action: localTour.cancel
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('statement-step', {
+  title: "<strong>New Prediction</strong>",
+  text: "<p>Enter your own prediction here.</p>" +
+  "<p>You aren't allowed to judge your own predictions, " +
+  "so make sure your proposition will be easy to score given publicly available information.</p>" +
+  "<p><span class='text-info'><strong>Good: Hilary Clinton will be elected POTUS in 2016.</strong></span></p>" +
+  "<p><span class='text-warning'><strong>Bad: Invisible gnomes will steal my keys before the heat death of the universe.</strong></span></p>",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#inputStatement right",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('deadline-step', {
+  title: "<strong>New Prediction</strong>",
+  text: "<p>Enter your deadline here. You can use English-like statements or enter a particular date.</p>" +
+  "<p>You can enter deadlines like <strong>'in two weeks'</strong>, <strong>'2016-12-01'</strong>, or <strong>'in seven years'</strong>.</p>",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#inputDeadline right",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('submit-step', {
+  title: "<strong>New Prediction</strong>",
+  text: "Don't forget to click <strong>Submit</strong> when you are finished.",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#new-prediction-submit-button bottom",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+
+
+
+$(document).ready(function() {
+  $('#tutorial-button').on('click', function (event) {
+    event.preventDefault();
+    localTour.start();
+  });
+});
+</script>
