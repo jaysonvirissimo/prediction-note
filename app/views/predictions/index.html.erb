@@ -78,6 +78,7 @@ localTour.addStep('statement-step', {
   "<p class='text-success'>✔: Verified</p>" +
   "<p class='text-danger'>❌: Falsified</p>",
   classes: 'shepherd-theme-arrows',
+  scrollTo: false,
   attachTo: "#prediction-statement-column bottom",
   buttons: [
   {
@@ -97,6 +98,7 @@ localTour.addStep('average-probability-step', {
   "divided by the total number of users that made wagers.</p> " +
   "<p>This should give you an idea about how likely other users believe the prediction to be.</p>",
   classes: 'shepherd-theme-arrows',
+  scrollTo: false,
   attachTo: "#average-probability-column bottom",
   buttons: [
   {
@@ -116,6 +118,7 @@ localTour.addStep('deadline-step', {
   "If it is in the past tense, then the truth-value of the statement should already be known. " +
   "Otherwise, there is still time left in which it may occur.",
   classes: 'shepherd-theme-arrows',
+  scrollTo: false,
   attachTo: "#deadline-column bottom",
   buttons: [
   {
