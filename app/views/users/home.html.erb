@@ -143,6 +143,26 @@ localTour = new Shepherd.Tour({
   }
 });
 
+<% if signed_in? %>
+localTour.addStep('dropdown-step', {
+  text: "If you click on your username in the upper right corner, a dropdown menu will appear with " +
+  "a <strong>Statistics</strong> and <strong>Settings</strong> buttons. The former shows your calibration and recent history, " +
+  "and the later let's you change your account configuration.",
+  attachTo: '#dropdown-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Exit',
+    action: localTour.cancel
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+<% end %>
+
 localTour.addStep('prediction-note-step', {
   text: 'The <strong>PredictionNote</strong> button is a link to the home page, so if you ever want to get back here, just click it.',
   attachTo: '#home-page-button bottom',
@@ -193,28 +213,9 @@ localTour.addStep('new-prediction-step', {
 
 localTour.addStep('awaiting-judgment-step', {
   text: "The <strong>Awaiting Judgment</strong> button shows you only the predictions that are past their deadline " +
-  " that haven't been judged yet. That little number inside the button represents the total number of outstanding predictions. " +
+  " that haven't already been judged. That little number inside the button represents the total number of outstanding predictions. " +
   "Do your part and bring down this number by judging predictions!",
   attachTo: '#awaiting-judgment-button bottom',
-  classes: 'shepherd-theme-arrows',
-  buttons: [
-  {
-    text: 'Back',
-    action: localTour.back
-  },
-  {
-    text: 'Next',
-    action: localTour.next
-  }
-  ]
-});
-
-<% if signed_in? %>
-localTour.addStep('dropdown-step', {
-  text: "If you click on your username in the upper right corner, a dropdown menu will appear with " +
-  "a <strong>Statistics</strong> and <strong>Settings</strong> buttons. The former shows your calibration and recent history, " +
-  "and the later let's you change your account configuration.",
-  attachTo: '#dropdown-button bottom',
   classes: 'shepherd-theme-arrows',
   buttons: [
   {
@@ -227,7 +228,6 @@ localTour.addStep('dropdown-step', {
   }
   ]
 });
-<% end %>
 
 $(document).ready(function() {
   $('#quote-carousel').carousel({
