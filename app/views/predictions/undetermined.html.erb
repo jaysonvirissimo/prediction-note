@@ -23,3 +23,35 @@
     <% end %>
   </tbody>
 </table>
+
+<script>
+var localTour;
+
+localTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+localTour.addStep('overview-step', {
+  title: "<strong>Overdue Predictions Tutorial</strong>",
+  text: "<p>The overdue predictions page lists all the predictions that need to be judged.</p>" +
+  "<p>Click on a statement if you want to judge it or learn more about it (such as which users have placed wagers on it). " +
+  "Just remember, if you were the original creator of the prediction, you will not be permitted to judge it yourself.</p>",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+
+$(document).ready(function() {
+  $('#tutorial-button').on('click', function (event) {
+    event.preventDefault();
+    localTour.start();
+  });
+});
+</script>

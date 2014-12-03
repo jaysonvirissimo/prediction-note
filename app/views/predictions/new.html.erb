@@ -84,8 +84,11 @@ localTour.addStep('statement-step', {
 
 localTour.addStep('deadline-step', {
   title: "<strong>New Prediction Tutorial</strong>",
-  text: "<p>Enter your deadline here. You can use English-like statements or enter a particular date.</p>" +
-  "<p>You can enter deadlines like <strong>'in two weeks'</strong>, <strong>'2016-12-01'</strong>, or <strong>'in seven years'</strong>.</p>",
+  text: "Enter your deadline here." +
+  "You can enter deadlines in a <strong>YYYY/MM/DD</strong> format, " +
+  "like <strong>'2016-12-01'</strong>, or even in plain English, " +
+  "such as <strong>'in two weeks'</strong>, " +
+  "or <strong>'in seven years'</strong>.",
   classes: 'shepherd-theme-arrows',
   attachTo: "#inputDeadline right",
   buttons: [
@@ -102,7 +105,8 @@ localTour.addStep('deadline-step', {
 
 localTour.addStep('submit-step', {
   title: "<strong>New Prediction Tutorial</strong>",
-  text: "Don't forget to click <strong>Submit</strong> when you are finished.",
+  text: "Don't forget to click <strong>Submit</strong> when you are finished. " +
+  "If you make a mistake, a warning will appear above the form to let you know what went wrong.",
   classes: 'shepherd-theme-arrows',
   attachTo: "#new-prediction-submit-button bottom",
   buttons: [
