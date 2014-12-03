@@ -31,9 +31,21 @@
 
       <div class="form-group">
         <div class="col-lg-10">
+          <button id="guest-button" class="btn btn-primary">Guest User</button>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
+
     </fieldset>
   </form>
 </div>
+
+<script>
+$(document).ready(function () {
+  $("#guest-button").on("click", function (event) {
+    event.preventDefault();
+    $("#inputUsername").attr("value", "Guest");
+    $("#inputPassword").attr("value", "password")
+  });
+});
+</script>
