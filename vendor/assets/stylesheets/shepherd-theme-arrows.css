@@ -21,7 +21,7 @@
     position: relative;
     font-family: inherit;
     background: #7a8288;
-    color: black;
+    color: white;
     padding: 1em;
     font-size: 1.1em;
     line-height: 1.5em;
@@ -122,13 +122,13 @@
 .shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-center.shepherd-has-title .shepherd-content:before, .shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-right.shepherd-target-attached-bottom.shepherd-has-title .shepherd-content:before, .shepherd-element.shepherd-theme-arrows.shepherd-element-attached-top.shepherd-element-attached-left.shepherd-target-attached-bottom.shepherd-has-title .shepherd-content:before {
   border-bottom-color: #eeeeee; }
 .shepherd-element.shepherd-theme-arrows.shepherd-has-title .shepherd-content header {
-  background: #eeeeee;
+  background: black;
   padding: 1em; }
   .shepherd-element.shepherd-theme-arrows.shepherd-has-title .shepherd-content header a.shepherd-cancel-link {
     padding: 0;
     margin-bottom: 0; }
 .shepherd-element.shepherd-theme-arrows.shepherd-has-cancel-link .shepherd-content header h3 {
-  float: left; }
+  float: left }
 .shepherd-element.shepherd-theme-arrows .shepherd-content {
   padding: 0; }
   .shepherd-element.shepherd-theme-arrows .shepherd-content * {

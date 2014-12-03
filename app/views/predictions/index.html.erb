@@ -1,20 +1,11 @@
-<script>
-$(document).ready(function () {
-  $('#tutorial-button').on('click', function (event) {
-    event.preventDefault();
-    localTour.start();
-  });
-});
-</script>
-
 <h1>Predictions</h1>
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
       <th>#</th>
-      <th id="prediction-statements">Statement</th>
-      <th>Average Probability</th>
-      <th>Deadline</th>
+      <th id="prediction-statement-column">Statement</th>
+      <th id="average-probability-column">Average Probability</th>
+      <th id="deadline-column">Deadline</th>
     </tr>
   </thead>
   <tbody>
@@ -65,12 +56,12 @@ localTour = new Shepherd.Tour({
 });
 
 localTour.addStep('overview-step', {
-  text: "The predictions page show a list of the 50 most recent predictions.",
-  attachTo: '#prediction-statements top',
+  title: "<strong>Predictions</strong>",
+  text: "The predictions page consists of a list of the 50 most recent predictions.",
   classes: 'shepherd-theme-arrows',
   buttons: [
   {
-    text: 'End',
+    text: 'Exit',
     action: localTour.cancel
   },
   {
@@ -78,5 +69,86 @@ localTour.addStep('overview-step', {
     action: localTour.next
   }
   ]
+});
+
+localTour.addStep('statement-step', {
+  title: "<strong>Predictions</strong>",
+  text: "<p>The statement column of the table contains the prediction statements and are marked with symbols disignating their judgment-status.</p>" +
+  "<p class='text-info'>⚫: Undetermined</p>" +
+  "<p class='text-success'>✔: Verified</p>" +
+  "<p class='text-danger'>❌: Falsified</p>",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#prediction-statement-column bottom",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('average-probability-step', {
+  title: "<strong>Predictions</strong>",
+  text: "<p>The average probabilty column respresents the sum of the wagers made on that prediction " +
+  "divided by the total number of users that made wagers.</p> " +
+  "<p>This should give you an idea about how likely other users believe the prediction to be.</p>",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#average-probability-column bottom",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('deadline-step', {
+  title: "<strong>Predictions</strong>",
+  text: "The deadline column respresents the 'due date' of that prediction. " +
+  "If it is in the past tense, then the truth-value of the statement should already be known. " +
+  "Otherwise, there is still time left in which it may occur.",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#deadline-column bottom",
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('visit-step', {
+  title: "<strong>Predictions</strong>",
+  text: "Click on a predictions statement in order to learn more about that prediction.",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+
+$(document).ready(function () {
+  $('#tutorial-button').on('click', function (event) {
+    event.preventDefault();
+    localTour.start();
+  });
 });
 </script>
