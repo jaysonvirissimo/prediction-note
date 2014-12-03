@@ -46,7 +46,7 @@ localTour = new Shepherd.Tour({
 });
 
 localTour.addStep('overview-step', {
-  title: "<strong>New Prediction</strong>",
+  title: "<strong>New Prediction Tutorial</strong>",
   text: "The new prediction page provides a form for you to make your own prediction.",
   classes: 'shepherd-theme-arrows',
   buttons: [
@@ -62,7 +62,7 @@ localTour.addStep('overview-step', {
 });
 
 localTour.addStep('statement-step', {
-  title: "<strong>New Prediction</strong>",
+  title: "<strong>New Prediction Tutorial</strong>",
   text: "<p>Enter your own prediction here.</p>" +
   "<p>You aren't allowed to judge your own predictions, " +
   "so make sure your proposition will be easy to score given publicly available information.</p>" +
@@ -83,7 +83,7 @@ localTour.addStep('statement-step', {
 });
 
 localTour.addStep('deadline-step', {
-  title: "<strong>New Prediction</strong>",
+  title: "<strong>New Prediction Tutorial</strong>",
   text: "<p>Enter your deadline here. You can use English-like statements or enter a particular date.</p>" +
   "<p>You can enter deadlines like <strong>'in two weeks'</strong>, <strong>'2016-12-01'</strong>, or <strong>'in seven years'</strong>.</p>",
   classes: 'shepherd-theme-arrows',
@@ -101,7 +101,7 @@ localTour.addStep('deadline-step', {
 });
 
 localTour.addStep('submit-step', {
-  title: "<strong>New Prediction</strong>",
+  title: "<strong>New Prediction Tutorial</strong>",
   text: "Don't forget to click <strong>Submit</strong> when you are finished.",
   classes: 'shepherd-theme-arrows',
   attachTo: "#new-prediction-submit-button bottom",
@@ -116,8 +116,6 @@ localTour.addStep('submit-step', {
   }
   ]
 });
-
-
 
 $(document).ready(function() {
   $('#tutorial-button').on('click', function (event) {
