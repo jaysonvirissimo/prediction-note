@@ -10,7 +10,7 @@
     display: block; }
 
 .shepherd-element.shepherd-theme-arrows {
-  max-width: 1024px;
+  max-width: 512px;
   max-height: 256px; }
   .shepherd-element.shepherd-theme-arrows .shepherd-content {
     -webkit-border-radius: 5px;
