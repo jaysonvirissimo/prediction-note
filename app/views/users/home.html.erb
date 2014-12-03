@@ -131,6 +131,103 @@ getStartedTour.addStep('tutorial-step', {
 </script>
 
 <script>
+var localTour;
+
+localTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+localTour.addStep('prediction-note-step', {
+  text: 'The <code>PredictionNote</code> button is a link to the home page, so if you ever want to get back here, just click it.',
+  attachTo: '#home-page-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Exit',
+    action: localTour.cancel
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('predictions-step', {
+  text: 'The <code>Predictions</code> button leads to an index containing the 50 latest predictions.',
+  attachTo: '#predictions-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('new-prediction-step', {
+  text: 'The <code>New Prediction</code> button is where you want to click if you want to make your very own prediction.',
+  attachTo: '#new-prediction-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('awaiting-judgment-step', {
+  text: "The <code>Awaiting Judgment</code> button shows you only the predictions that are past their deadline " +
+  " that haven't been judged yet. That little number inside the button represents the total number of outstanding predictions. " +
+  "Do your part and bring down this number by judging predictions.",
+  attachTo: '#awaiting-judgment-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+<% if signed_in? %>
+localTour.addStep('dropdown-step', {
+  text: "If you click on your username in the upper right corner, a dropdown menu will appear with " +
+  "a <code>Statistics</code> and <code>Settings</code> buttons. The former shows your calibration and recent history, " +
+  "and the later let's you change your account configuration.",
+  attachTo: '#dropdown-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+<% end %>
+</script>
+
+<script>
 $(document).ready(function() {
   $('#quote-carousel').carousel({
     pause: true,
