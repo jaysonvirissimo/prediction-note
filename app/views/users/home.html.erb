@@ -4,7 +4,7 @@
   <p>Find out just how sure you should be, and get better at being only as sure as the facts justify.</p>
 
   <div>
-    <p><a class="btn btn-primary btn-lg">Get Started</a></p>
+    <p><a id="getting-started-button" class="btn btn-primary btn-lg">Get Started</a></p>
   </div>
 </div>
 
@@ -62,10 +62,70 @@
 <br>
 
 <script>
+// get started tour
+var getStartedTour;
+
+getStartedTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+getStartedTour.addStep('tutorial-step', {
+  text: "At any time you can click this <code>Tutorial</code> button to get an explanation of all the main features on the page.",
+  attachTo: '#tutorial-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Next',
+    action: getStartedTour.next
+  }
+  ]
+});
+
+<% unless signed_in? %>
+getStartedTour.addStep('sign-in-step', {
+  text: "In order to get the most of <strong>PredictionNote</strong>, you must be signed in. " +
+  "If you just want to try things out, there is also a <code>Guest User</code> option. " +
+  "Click <code>Sign In</code> to navigate to the sign in page.",
+  attachTo: '#sign-in-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Next',
+    action: getStartedTour.next
+  }
+  ]
+});
+
+getStartedTour.addStep('sign-up-step', {
+  text: "If you want your own account so you can track your personal progress, " +
+  "just click the <code>Sign Up</code> button and enter a username and 6 or more digit password.",
+  attachTo: '#sign-up-button bottom',
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Next',
+    action: getStartedTour.next
+  }
+  ]
+});
+
+<% end %>
+</script>
+
+<script>
 $(document).ready(function() {
   $('#quote-carousel').carousel({
     pause: true,
     interval: 5000,
   });
+
+  $("#getting-started-button").on("click", function (event) {
+    event.preventDefault();
+    getStartedTour.start();
+  });
+
 });
 </script>
