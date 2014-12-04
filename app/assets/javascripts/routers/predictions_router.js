@@ -1,3 +1,3 @@
-PredictionNote.Routers.Predictions = Backbone.Router.extend({
+PredictionNote.Routers.Router = Backbone.Router.extend({
 
 });

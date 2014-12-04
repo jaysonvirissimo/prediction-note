@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'users#home'
+  get '/api/undetermined' => 'api/predictions#undetermined'
   get '/undetermined' => 'predictions#undetermined'
   post '/judgments' => 'judgments#create'
 

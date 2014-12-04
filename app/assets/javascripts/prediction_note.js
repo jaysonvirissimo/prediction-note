@@ -4,7 +4,8 @@ window.PredictionNote = {
   Views: {},
   Routers: {},
   initialize: function() {
-    // start router and history
+    new PredictionNote.Routers.Router({});
+    Backbone.history.start();
   }
 };
 
