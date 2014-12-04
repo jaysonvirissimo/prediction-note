@@ -7,3 +7,54 @@
     <p><a id="getting-started-button" class="btn btn-primary btn-lg">Get Started</a></p>
   </div>
 </div>
+
+<div class='row well well-sm' style="margin:0" id="quotes-well">
+<div class='col-lg-offset-2 col-lg-8'>
+<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+<!-- Bottom Carousel Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+<li data-target="#quote-carousel" data-slide-to="1"></li>
+<li data-target="#quote-carousel" data-slide-to="2"></li>
+</ol>
+
+<!-- Carousel Slides / Quotes -->
+<div class="carousel-inner">
+
+<!-- Quote 1 -->
+<div class="item active">
+<blockquote>
+<div class="row">
+<div class="col-lg-offset-2 col-lg-9">
+<p><%= quotes.at(0).quote %></p>
+<small><%= quotes.at(0).author %></small>
+</div>
+</div>
+</blockquote>
+</div>
+<!-- Quote 2 -->
+<div class="item">
+<blockquote>
+<div class="row">
+<div class="col-lg-offset-2 col-lg-9">
+<p><%= quotes.at(1).quote %></p>
+<small><%= quotes.at(1).author %></small>
+</div>
+</div>
+</blockquote>
+</div>
+<!-- Quote 3 -->
+<div class="item">
+<blockquote>
+<div class="row">
+<div class="col-lg-offset-2 col-lg-9">
+<p><%= quotes.at(2).quote %></p>
+<small><%= quotes.at(2).author %></small>
+</div>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>

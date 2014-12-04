@@ -9,7 +9,11 @@ PredictionNote.Routers.Router = Backbone.Router.extend({
   },
 
   home: function () {
-    var homeView = new PredictionNote.Views.Home();
+    PredictionNote.Collections.quotes.fetch();
+    debugger;
+    var homeView = new PredictionNote.Views.Home({
+      quotes: PredictionNote.Collections.quotes
+    });
     this._swapView(homeView);
   },
 

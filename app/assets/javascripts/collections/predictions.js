@@ -22,4 +22,4 @@ PredictionNote.Collections.Predictions = Backbone.Collection.extend({
 
 });
 
-PredictionNote.Collections.predictions = new PredictionNote.Collections.Predictions
+PredictionNote.Collections.predictions = new PredictionNote.Collections.Predictions();
