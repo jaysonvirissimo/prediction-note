@@ -3,9 +3,11 @@ window.PredictionNote = {
   Collections: {},
   Views: {},
   Routers: {},
-  Utils: {},
   initialize: function() {
-    // new PredictionNote.Routers.Router
-    // Backbone.history.start();
+    // start router and history
   }
 };
+
+$(document).ready(function(){
+  PredictionNote.initialize();
+});
