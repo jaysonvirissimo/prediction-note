@@ -3,6 +3,16 @@ PredictionNote.Routers.Router = Backbone.Router.extend({
     this.$rootEl = options.$rootEl;
   },
 
+  routes: {
+    "": "home",
+    "predictions": "index"
+  },
+
+  home: function () {
+    var homeView = new PredictionNote.Views.Home();
+    this._swapView(homeView);
+  },
+
   index: function () {
     PredictionNote.Collections.predictions.fetch();
 
