@@ -5,12 +5,13 @@ PredictionNote.Collections.Predictions = Backbone.Collection.extend({
 
   getOrFetch: function (id) {
     var prediction = this.get(id);
+    var predictions = this;
 
     if(!prediction) {
       prediction = new PredictionNote.Models.Prediction({ id: id });
       prediction.fetch({
         success: function () {
-          this.add(prediction);
+          predictions.add(prediction);
         }.bind(this)
       });
     } else {

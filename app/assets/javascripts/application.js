@@ -13,11 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap.min
-//= require shepherd.min
 //= require underscore
 //= require backbone
 //= require prediction_note
+//= require bootstrap.min
+//= require shepherd.min
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

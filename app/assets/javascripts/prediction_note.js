@@ -10,7 +10,3 @@ window.PredictionNote = {
     Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  PredictionNote.initialize();
-});

@@ -4,21 +4,22 @@ PredictionNote.Routers.Router = Backbone.Router.extend({
   },
 
   routes: {
-    "": "home",
-    "predictions": "index"
+    "": "predictions"
   },
 
-  home: function () {
+  quotes: function () {
     PredictionNote.Collections.quotes.fetch();
-    debugger;
-    var homeView = new PredictionNote.Views.Home({
-      quotes: PredictionNote.Collections.quotes
+
+    var quotesView = new PredictionNote.Views.Quotes({
+      collection: PredictionNote.Collections.quotes
     });
-    this._swapView(homeView);
+
+    this._swapView(quotesView);
   },
 
-  index: function () {
+  predictions: function () {
     PredictionNote.Collections.predictions.fetch();
+    debugger;
 
     var indexView = new PredictionNote.Views.PredictionsIndex({
       collection: PredictionNote.Collections.predictions

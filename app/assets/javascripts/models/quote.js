@@ -1,1 +1,3 @@
-PredictionNote.Models.Quote = Backbone.Model.extend({});
+PredictionNote.Models.Quote = Backbone.Model.extend({
+  urlRoot: "api/quotes"
+});

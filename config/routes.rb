@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   root to: 'users#home'
-  get 'api/home' => 'api/users#home'
   get '/undetermined' => 'predictions#undetermined'
   post '/judgments' => 'judgments#create'
 
@@ -13,5 +12,6 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :predictions, only: [:index, :show]
+    resources :quotes, only: [:index, :show]
   end
 end

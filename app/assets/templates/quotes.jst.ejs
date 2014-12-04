@@ -1,0 +1,39 @@
+<div class="jumbotron" id="welcome-jumbotron">
+  <h2>Welcome to <strong>PredictionNote</strong></h2>
+
+  <p>Find out just how sure you should be, and get better at being only as sure as the facts justify.</p>
+
+  <div>
+    <p><a id="getting-started-button" class="btn btn-primary btn-lg">Get Started</a></p>
+  </div>
+</div>
+
+<div class='row well well-sm' style="margin:0" id="quotes-well">
+  <div class='col-lg-offset-2 col-lg-8'>
+    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+      <!-- Bottom Carousel Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#quote-carousel" data-slide-to="1"></li>
+        <li data-target="#quote-carousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Carousel Slides / Quotes -->
+      <div class="carousel-inner">
+
+      <% quotes.each(function (quote) { %>
+        <div class="item active">
+          <blockquote>
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-9">
+                <p><%= quote.escape('quote') %></p>
+                <small><%= quote.escape('author') %></small>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      <% }); %>
+      </div>
+    </div>
+  </div>
+</div>

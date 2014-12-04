@@ -1,6 +1,6 @@
-PredictionNote.Views.Home = Backbone.View.extend({
+PredictionNote.Views.Quotes = Backbone.View.extend({
 
-  template: JST['home'],
+  template: JST['quotes'],
 
   render: function () {
     var renderedContent = this.template({
@@ -9,5 +9,4 @@ PredictionNote.Views.Home = Backbone.View.extend({
     this.$el.html(renderedContent);
     return this;
   }
-
 });

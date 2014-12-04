@@ -1,5 +1,6 @@
 <h1>Predictions</h1>
+<ul>
 <% predictions.each(function (prediction) { %>
-<%= prediction.statement %>
-<%= prediction.deadline %>
+<li><%= prediction.escape('statement') %> -- <%= prediction.escape('deadline') %></li>
 <% }); %>
+</ul>
