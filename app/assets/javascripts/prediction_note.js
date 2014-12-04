@@ -4,7 +4,10 @@ window.PredictionNote = {
   Views: {},
   Routers: {},
   initialize: function() {
-    // start router and history
+    new PredictionNote.Routers.Router({
+      $rootEl: $("#content")
+    });
+    Backbone.history.start();
   }
 };
 
