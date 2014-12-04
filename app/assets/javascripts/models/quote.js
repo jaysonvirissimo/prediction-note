@@ -1,1 +1,1 @@
-PredictionNote.Models.Prediction = Backbone.Model.extend({});
+PredictionNote.Models.Quote = Backbone.Model.extend({});

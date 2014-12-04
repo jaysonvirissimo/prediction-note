@@ -4,7 +4,7 @@ PredictionNote.Views.Home = Backbone.View.extend({
 
   render: function () {
     var renderedContent = this.template({
-      quotes: this.quotes
+      quotes: this.collection
     });
     this.$el.html(renderedContent);
     return this;
