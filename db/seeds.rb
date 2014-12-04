@@ -44,7 +44,7 @@ def create_judgments(number)
   end
 end
 
-def create_quotes
+def real_quotes
   Quote.create!(
     author: 'Alex Tabarrok',
     quote: 'A bet is a tax on bullshit.'
@@ -146,13 +146,38 @@ def create_quotes
   )
 end
 
-def create_guest_user
+# Requires Guest User to have an id of 1.
+def real_predictions
+  Prediction.create!(
+    user_id: 1,
+    statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios to be GREATER THAN 55cm",
+    deadline: Chronic.parse("2015-01-05")
+  )
+
+  Prediction.create!(
+    user_id: 1,
+    statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios to be GREATER THAN 50cm",
+    deadline: Chronic.parse("2015-01-05")
+  )
+
+  Prediction.create!(
+    user_id: 1,
+    statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios (as percentage of 1 metre)",
+    deadline: Chronic.parse("2015-02-01")
+  )
+end
+
+def real_guest_user
   User.create!(username: 'Guest', password: 'password')
 end
 
-create_users(16)
-create_guest_user # warning: guest login won't work without this
-create_predictions(64)
-create_wagers(256)
-create_judgments(64)
-create_quotes
+# real data
+real_guest_user # warning: guest login won't work without this
+real_quotes
+real_predictions
+
+# computer generated data
+# create_users(16)
+# create_predictions(64)
+# create_wagers(256)
+# create_judgments(64)
