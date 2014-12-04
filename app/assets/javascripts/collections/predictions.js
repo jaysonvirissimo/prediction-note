@@ -1,6 +1,7 @@
 PredictionNote.Collections.Predictions = Backbone.Collection.extend({
+  url: "api/predictions",
+
   model: PredictionNote.Models.Prediction,
-  url: 'api/predictions',
 
   getOrFetch: function (id) {
     var prediction = this.get(id);
@@ -18,6 +19,7 @@ PredictionNote.Collections.Predictions = Backbone.Collection.extend({
 
     return prediction;
   }
+
 });
 
 PredictionNote.Collections.predictions = new PredictionNote.Collections.Predictions
