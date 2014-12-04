@@ -32,7 +32,7 @@
       <div class="form-group">
         <div class="col-lg-10">
           <button id="guest-button" class="btn btn-primary">Guest User</button>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
 
@@ -41,11 +41,74 @@
 </div>
 
 <script>
+var localTour;
+
+localTour = new Shepherd.Tour({
+  defaults: {
+    classes: 'shepherd-theme-arrows',
+    scrollTo: true
+  }
+});
+
+localTour.addStep('overview-step', {
+  title: "<strong>Sign In Tutorial</strong>",
+  text: "This is the sign in page. You can sign in using your own user account or...",
+  classes: 'shepherd-theme-arrows',
+  buttons: [
+  {
+    text: 'Exit',
+    action: localTour.cancel
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('guest-user-step', {
+  title: "<strong>Sign In Tutorial</strong>",
+  text: "Click this <strong>Guest User</strong> button if you want to try out the website without creating your own user account.",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#guest-button bottom",
+  scrollTo: true,
+  buttons: [
+  {
+    text: 'Back',
+    action: localTour.back
+  },
+  {
+    text: 'Next',
+    action: localTour.next
+  }
+  ]
+});
+
+localTour.addStep('submit-step', {
+  title: "<strong>Sign In Tutorial</strong>",
+  text: "Don't forget to click submit after you have entered your credentials or clicked on Guest User.",
+  classes: 'shepherd-theme-arrows',
+  attachTo: "#submit-button bottom",
+  scrollTo: true,
+  buttons: [
+  {
+    text: 'End',
+    action: localTour.next
+  }
+  ]
+});
+
+
 $(document).ready(function () {
   $("#guest-button").on("click", function (event) {
     event.preventDefault();
     $("#inputUsername").attr("value", "Guest");
     $("#inputPassword").attr("value", "password")
+  });
+
+  $('#tutorial-button').on('click', function (event) {
+    event.preventDefault();
+    localTour.start();
   });
 });
 </script>
