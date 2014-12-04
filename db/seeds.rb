@@ -148,6 +148,7 @@ end
 
 # Requires Guest User to have an id of 1.
 def real_predictions
+  # science and tech
   Prediction.create!(
     user_id: 1,
     statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios to be GREATER THAN 55cm",
@@ -162,9 +163,25 @@ def real_predictions
 
   Prediction.create!(
     user_id: 1,
-    statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios (as percentage of 1 metre)",
-    deadline: Chronic.parse("2015-02-01")
+    statement: "Trans-Pacific Cable to be laid before 2017",
+    deadline: Chronic.parse("2017-01-01")
   )
+
+  Prediction.create!(
+    user_id: 1,
+    statement: "Trans-Pacific Cable to be laid before 2015",
+    deadline: Chronic.parse("2015-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 1,
+    statement: "NASA to announce the discovery of extraterrestrial life before 1 Jan 2016",
+    deadline: Chronic.parse("2016-02-01")
+  )
+
+  # commodities
+
+  
 end
 
 def real_guest_user

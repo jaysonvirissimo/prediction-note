@@ -3,18 +3,17 @@ module Api
     before_action :require_signed_in!, only: [:new, :create]
 
     def index
-      @predictions = Prediction.last(50).reverse
+      @predictions = Prediction.all
       render json: @predictions
     end
 
     def undetermined
-      @due_for_judgment = Prediction.due_for_judgment.sort_by(&:deadline)
+      @due_for_judgment = Prediction.due_for_judgment
       render json: @due_for_judgment
     end
 
     def show
       @prediction = Prediction.find(params[:id])
-      @judgment = @prediction.judgments.last
       render json: @prediction
     end
   end
