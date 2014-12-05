@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :predictions, only: [:index, :show]
     resources :wagers, only: [:index]
     resources :judgments, only: [:index]
+    resources :quotes, only: [:index]
   end
 end
