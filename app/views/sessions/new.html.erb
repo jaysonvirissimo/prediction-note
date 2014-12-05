@@ -103,7 +103,8 @@ $(document).ready(function () {
   $("#guest-button").on("click", function (event) {
     event.preventDefault();
     $("#inputUsername").attr("value", "Guest");
-    $("#inputPassword").attr("value", "password")
+    $("#inputPassword").attr("value", "password");
+    $("#submit-button").trigger("click");
   });
 
   $('#tutorial-button').on('click', function (event) {
