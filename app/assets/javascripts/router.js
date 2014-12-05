@@ -5,14 +5,14 @@ window.PredictionNote = new (Backbone.Router.extend({
   },
 
   initialize: function(){
-    this.todoItems = new TodoItems();
-    this.todosView = new TodosView({collection: this.todoItems});
-    this.todosView.render();
+    this.predictions = new Predictions();
+    this.predictionsView = new PredictionsView({collection: this.predictions});
+    this.predictionsView.render();
   },
 
   index: function(){
-    $('#app').html(this.todosView.el);
-    this.todoItems.fetch();
+    $('#backbone-test').html(this.predictionsView.el);
+    this.predictions.fetch();
   },
 
   start: function(){
@@ -20,6 +20,6 @@ window.PredictionNote = new (Backbone.Router.extend({
   },
 
   show: function(id){
-    this.todoItems.focusOnTodoItem(id);
+    this.predictions.focusOnPrediction(id);
   }
 }));

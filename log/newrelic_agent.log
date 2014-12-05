@@ -970,3 +970,23 @@
 [12/05/14 10:41:32 -0800 Hobbes (9664)] INFO : Doing deferred dependency-detection before Rack startup
 [12/05/14 10:41:44 -0800 Hobbes (9664)] ERROR : Unknown license key
 [12/05/14 10:41:44 -0800 Hobbes (9664)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Starting the New Relic agent in "development" environment.
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[12/05/14 11:08:29 -0800 Hobbes (10618)] WARN : No configuration file found. Working directory = /home/jayson/Desktop/prediction-note
+[12/05/14 11:08:29 -0800 Hobbes (10618)] WARN : Looked in these locations (based on defaults): /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/Desktop/prediction-note/config/newrelic.yml, /home/jayson/Desktop/prediction-note/newrelic.yml, /home/jayson/.newrelic/newrelic.yml, /home/jayson/newrelic.yml
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Environment: development
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : No known dispatcher detected.
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Application: development
+[12/05/14 11:08:29 -0800 Hobbes (10618)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Rails 3+ middleware instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing ActiveRecord 4 instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing deferred Rack instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Rack::Builder middleware instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Net instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Rails 4 Error instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Rails 4 Controller instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Installing Rails 4 view instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Finished instrumentation
+[12/05/14 11:08:29 -0800 Hobbes (10618)] INFO : Doing deferred dependency-detection before Rack startup
+[12/05/14 11:08:48 -0800 Hobbes (10618)] ERROR : Unknown license key
+[12/05/14 11:08:48 -0800 Hobbes (10618)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
