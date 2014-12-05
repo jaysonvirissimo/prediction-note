@@ -24,42 +24,7 @@
       </ol>
 
       <!-- Carousel Slides / Quotes -->
-      <div class="carousel-inner">
-
-        <!-- Quote 1 -->
-        <div class="item active">
-          <blockquote>
-            <div class="row">
-              <div class="col-lg-offset-2 col-lg-9">
-                <p><%= @quotes.first.quote %></p>
-                <small><%= @quotes.first.author %></small>
-              </div>
-            </div>
-          </blockquote>
-        </div>
-        <!-- Quote 2 -->
-        <div class="item">
-          <blockquote>
-            <div class="row">
-              <div class="col-lg-offset-2 col-lg-9">
-                <p><%= @quotes.second.quote %></p>
-                <small><%= @quotes.second.author %></small>
-              </div>
-            </div>
-          </blockquote>
-        </div>
-        <!-- Quote 3 -->
-        <div class="item">
-          <blockquote>
-            <div class="row">
-              <div class="col-lg-offset-2 col-lg-9">
-                <p><%= @quotes.third.quote %></p>
-                <small><%= @quotes.third.author %></small>
-              </div>
-            </div>
-          </blockquote>
-        </div>
-      </div>
+      <div class="carousel-inner"></div>
     </div>
   </div>
 </div>
@@ -244,11 +209,6 @@ localTour.addStep('awaiting-judgment-step', {
 });
 
 $(document).ready(function() {
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 5000,
-  });
-
   $("#getting-started-button").on("click", function (event) {
     event.preventDefault();
     getStartedTour.start();
