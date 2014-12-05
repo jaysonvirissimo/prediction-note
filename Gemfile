@@ -14,6 +14,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'newrelic_rpm'
 gem 'backbone-on-rails'
+gem 'thin', group: :production
 
 group :devemopment, :test do
   gem 'spring'
