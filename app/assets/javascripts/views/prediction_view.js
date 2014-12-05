@@ -1,5 +1,9 @@
 window.PredictionView = Backbone.View.extend({
-  template: _.template('<p><%= statement %>"></p>'),
+  template: _.template(
+  "<td>0</td>" +
+  "<td><%= status %><%= statement %></td>" +
+  "<td><%= deadline %></td>"
+  ),
 
   events: {
     'change input': 'toggleStatus'

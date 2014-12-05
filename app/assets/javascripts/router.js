@@ -11,8 +11,9 @@ window.PredictionNote = new (Backbone.Router.extend({
   },
 
   index: function(){
-    $('#backbone-test').html(this.predictionsView.el);
-    this.predictions.fetch();
+    //$('#backbone-test').html(this.predictionsView.el);
+    //this.predictions.fetch();
+    // turn off index for now
   },
 
   start: function(){
