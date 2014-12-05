@@ -1,7 +1,5 @@
 module Api
   class PredictionsController < ApplicationController
-    before_action :require_signed_in!, only: [:new, :create]
-
     def index
       @predictions = Prediction.all
       render json: @predictions

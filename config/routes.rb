@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :predictions, only: [:index, :show]
+    resources :wagers, only: [:index]
+    resources :judgments, only: [:index]
   end
 end
