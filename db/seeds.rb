@@ -150,114 +150,149 @@ end
 def real_predictions
   # science and tech
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios to be GREATER THAN 55cm",
     deadline: Chronic.parse("2015-01-05")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Maximum IPCC5 forecast for sea-level rise in 21st Century under SRES scenarios to be GREATER THAN 50cm",
     deadline: Chronic.parse("2015-01-05")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Trans-Pacific Cable to be laid before 2017",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Trans-Pacific Cable to be laid before 2015",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "NASA to announce the discovery of extraterrestrial life before 1 Jan 2016",
     deadline: Chronic.parse("2016-02-01")
   )
 
   # commodities
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "91 unleaded petrol to be greater than or equal to 200 cents and less than 205 cents for week ended 26 December 2014",
     deadline: Chronic.parse("2014-12-26")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "London Fix AM Gold price to be greater than or equal to $1,150 and less than $1,210 on 1 January 2015",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Twitter NYSE share price to equal or exceed $75 before 1 Jan 2015",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Facebook NASDAQ share price to equal or exceed US$85 before 1 Jan 2015",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Apple NASDAQ share price to equal or exceed US$120 in 2014",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
+    user_id: 71,
     statement: "Democratic Party candidate to be elected US President in 2016",
     deadline: Chronic.parse("2015-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "",
+    user_id: 71,
+    statement: "Republican Party candidate to be elected US President in 2016",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Neither a Democratic or Republican Party candidate to be elected US President in 2016",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Hillary Clinton to be Democratic Party nominee for the 2016 Presidential Election",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Andrew Cuomo to be Democratic Party nominee for the 2016 Presidential Election",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Elizabeth Warren to be Democratic Party nominee for the 2016 Presidential Election",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Jeb Bush to be Republican Party nominee for the 2016 Presidential Election",
     deadline: Chronic.parse("2017-01-01")
   )
 
   Prediction.create!(
-    user_id: 70,
-    statement: "US Supreme Court Judge to Retire in 2014",
+    user_id: 71,
+    statement: "Rand Paul to be Republican Party nominee for the 2016 Presidential Election",
     deadline: Chronic.parse("2017-01-01")
   )
 
+  Prediction.create!(
+    user_id: 71,
+    statement: "US Economy to be in Recession in 2014",
+    deadline: Chronic.parse("2015-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 71,
+    statement: "Shinzo Abe to be Prime Minister of Japan on 1 January 2015",
+    deadline: Chronic.parse("2015-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 71,
+    statement: "Bashar al-Assad to be President of Syria on 1 Jan 2016",
+    deadline: Chronic.parse("2016-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 71,
+    statement: "United States and/or Israel to execute an air strike against Iran before 1 Jan 2015",
+    deadline: Chronic.parse("2015-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 71,
+    statement: "United States and/or Israel to execute an air strike against Iran before 1 Jan 2016",
+    deadline: Chronic.parse("2016-01-01")
+  )
+
+  Prediction.create!(
+    user_id: 71,
+    statement: "Kim Jong-un to cease being Leader of North Korea before 2020",
+    deadline: Chronic.parse("2020-01-01")
+  )
 end
 
 def real_guest_user
@@ -265,8 +300,8 @@ def real_guest_user
 end
 
 # real data
-real_guest_user # warning: guest login won't work without this
-real_quotes
+# real_guest_user # warning: guest login won't work without this
+# real_quotes
 real_predictions
 
 # computer generated data
